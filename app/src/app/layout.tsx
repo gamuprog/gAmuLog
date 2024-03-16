@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_Antique } from "next/font/google";

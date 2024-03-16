@@ -4,7 +4,7 @@ type Props = {
   className?: string;
 };
 
-export function HomeHeaderItems({ className }: Props) {
+export function FooterItems({ className }: Props) {
   return (
     <div className={`flex gap-8 mt-4 md:mt-0 ${className}`}>
       <span>

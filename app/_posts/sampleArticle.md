@@ -1,8 +1,9 @@
 ---
 title: "サンプるxxx"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum "
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2024-03-16T05:35:07.322Z"
+tags: ["tagD", "tagA"]
 author:
   name: "わし"
   picture: "/assets/blog/authors/jj.jpeg"

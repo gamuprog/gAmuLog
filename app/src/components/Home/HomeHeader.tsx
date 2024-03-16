@@ -6,7 +6,7 @@ export function HomeHeader() {
       <section className="mx-4 flex-col md:flex-row flex items-center md:justify-between">
         <div className="flex flex-col items-center">
           <div className="text-xl md:text-4xl font-bold tracking-tight leading-tight">
-            GamuLog.
+            gAmuLog.
           </div>
           <div className="mr-2 text-sm">がむログ</div>
         </div>
