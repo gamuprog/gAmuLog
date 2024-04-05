@@ -3,36 +3,41 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
-import Alert from "@/components/alert";
-import Container from "@/components/container";
-import Header from "@/components/header";
-import { PostBody } from "@/components/post-body";
-import { PostHeader } from "@/components/post-header";
+import { PostBody } from "@/components/Post/post-body";
+import { PostHeader } from "@/components/Post/post-header";
+import { Sidebar } from "@/components/Sidebar";
+import { PostPageHeader } from "@/components/Post/PostPageHeader";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
+
+  const allPosts = getAllPosts();
 
   if (!post) {
     return notFound();
   }
 
+  const relatedPosts = allPosts.filter(
+    (p) => p.slug !== post.slug && p.tags.some((tag) => post.tags.includes(tag))
+  );
+
   const content = await markdownToHtml(post.content || "");
 
   return (
     <main>
-      <Alert preview={post.preview} />
-      <Container>
-        <Header />
-        <article className="mb-32">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
+      <PostPageHeader />
+      <article className="my-32 px-16 ">
+        <PostHeader
+          title={post.title}
+          coverImage={post.coverImage}
+          date={post.date}
+          author={post.author}
+        />
+        <div className="flex mx-16 justify-between">
           <PostBody content={content} />
-        </article>
-      </Container>
+          <Sidebar posts={relatedPosts} />
+        </div>
+      </article>
     </main>
   );
 }

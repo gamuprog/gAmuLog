@@ -1,5 +1,6 @@
 import { Post } from "@/interfaces/post";
 import { PostPreview } from "../PostPreview";
+import { ViewMoreButton } from "@/components/ViewMoreButton";
 
 type Props = {
   posts: Post[];
@@ -22,7 +23,7 @@ export function HomeSection({
         {sectionTitleJa}
       </h2>
       <div className="text-center text-gray-500 mb-8">{sectionTitleEn}</div>
-      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-20 md:gap-y-32 pb-32">
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-20 md:gap-y-32">
         {posts.slice(0, maxPostsToShow).map((post) => (
           <PostPreview
             key={post.slug}
@@ -35,6 +36,7 @@ export function HomeSection({
           />
         ))}
       </div>
+      <ViewMoreButton to="/" className="py-16" />
     </section>
   );
 }
