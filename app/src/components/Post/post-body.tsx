@@ -1,4 +1,4 @@
-import { ColoredTagWithLink } from "@/components/ColoredTagWithLink";
+import { ColoredTagSC } from "@/components/ColoredTagSC";
 import CoverImageForArticle from "@/components/CoverImageForArticle";
 import DateFormatter from "@/components/date-formatter";
 import markdownStyles from "@/components/markdown-styles.module.css";
@@ -17,7 +17,7 @@ export function PostBody({ content, title, coverImage, date, tags }: Props) {
     <div className="max-w-3xl mr-10">
       <div className="flex flex-wrap gap-4">
         {tags.map((tag) => (
-          <ColoredTagWithLink tag={tag} key={tag} />
+          <ColoredTagSC tag={tag} key={tag} />
         ))}
       </div>
       <div className="max-w-2xl mb-6 text-lg">
