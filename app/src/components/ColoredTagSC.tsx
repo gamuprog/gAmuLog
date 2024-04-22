@@ -5,7 +5,7 @@ type Props = {
   tag: Tag;
 };
 
-export const ColoredTagWithLink = ({ tag }: Props) => {
+export const ColoredTagSC = ({ tag }: Props) => {
   switch (tag) {
     case "Tech":
       return (
