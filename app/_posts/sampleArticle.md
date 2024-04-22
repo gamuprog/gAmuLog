@@ -3,15 +3,14 @@ title: "useEffectとuseMemoの使い分け その実装は本当にuseEffectで�
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum "
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2024-03-16T05:35:07.322Z"
-tags: ["tagD", "tagA"]
+category: "Tech"
+tags: ["JavaScript"]
 author:
   name: "わし"
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
-
-サンプル本文です。
 
 ## サンプル見出し
 

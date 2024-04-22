@@ -4,9 +4,9 @@ import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { PostBody } from "@/components/Post/post-body";
-import { PostHeader } from "@/components/Post/post-header";
 import { Sidebar } from "@/components/Sidebar";
 import { PostPageHeader } from "@/components/Post/PostPageHeader";
+import { PostTitle } from "@/components/Post/post-title";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -26,15 +26,16 @@ export default async function Post({ params }: Params) {
   return (
     <main>
       <PostPageHeader />
-      <article className="my-32 px-16 ">
-        <PostHeader
-          title={post.title}
-          coverImage={post.coverImage}
-          date={post.date}
-          author={post.author}
-        />
+      <article className="my-32 px-16">
+        <PostTitle>{post.title}</PostTitle>
         <div className="flex mx-16 justify-between">
-          <PostBody content={content} />
+          <PostBody
+            title={post.title}
+            date={post.date}
+            tags={post.tags}
+            coverImage={post.coverImage}
+            content={content}
+          />
           <Sidebar posts={relatedPosts} />
         </div>
       </article>
