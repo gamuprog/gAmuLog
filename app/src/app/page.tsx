@@ -1,8 +1,7 @@
-import { HeroPost } from "@/components/hero-post";
 import { HomeHeader } from "@/components/Home/HomeHeader";
 import { HomeSection } from "@/components/Home/HomeSection";
 import { getAllPosts } from "@/lib/api";
-import Image from "next/image";
+import React from "react";
 
 export default function Index() {
   const allPosts = getAllPosts();
@@ -24,18 +23,21 @@ export default function Index() {
         <div className="mt-2 ml-4">技術記事と、開発日記と、趣味置き場。</div>
       </div>
       <HomeSection
-        posts={allPosts}
+        themeColorVariant="blue"
+        posts={allPosts.filter((post) => post.category === "Tech")}
         sectionTitleJa="技術記事"
         sectionTitleEn="Tech Articles"
       />
       <HomeSection
-        posts={allPosts}
+        themeColorVariant="green"
+        posts={allPosts.filter((post) => post.category === "DevDiary")}
         sectionTitleJa="開発日記"
         sectionTitleEn="Dev Diary"
         className="bg-gray-100"
       />
       <HomeSection
-        posts={allPosts}
+        themeColorVariant="orange"
+        posts={allPosts.filter((post) => post.category === "LifeStyle")}
         sectionTitleJa="雑談"
         sectionTitleEn="Lifestyle & Hobby"
       />

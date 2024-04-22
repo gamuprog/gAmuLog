@@ -1,17 +1,24 @@
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 import Image from "next/image";
+import { ThemeColorVariant } from "@/components/Home/HomeSection";
+import { ColoredTag } from "@/components/ColoredTag";
+import { Tag } from "@/interfaces/tag";
+import { useRouter } from "next/navigation";
+import { MouseEvent } from "react";
 
 type Props = {
+  themeColorVariant: ThemeColorVariant;
   title: string;
   coverImage: string;
   date: string;
-  tags: string[];
+  tags: Tag[];
   excerpt: string;
   slug: string;
 };
 
 export function PostPreview({
+  themeColorVariant,
   title,
   coverImage,
   date,
@@ -19,8 +26,16 @@ export function PostPreview({
   excerpt,
   slug,
 }: Props) {
+  const shadowVariants: { [key in ThemeColorVariant]: string } = {
+    blue: "hover:shadow-blue-200",
+    green: "hover:shadow-green-200",
+    orange: "hover:shadow-orange-200",
+  };
+
   return (
-    <div className="rounded-md hover:shadow-2xl transition-shadow duration-400 ease-in-out">
+    <div
+      className={`rounded-md hover:shadow-sm shadow-transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
+    >
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <div className="mb-5 overflow-hidden">
           <Image
@@ -34,11 +49,11 @@ export function PostPreview({
         <h3 className="text-xl leading-snug px-2">{title}</h3>
         <div className="text-sm text-gray-400 mb-2 px-2 flex justify-between">
           <DateFormatter dateString={date} />
-          <button className="flex gap-2">
+          <div className="flex gap-2 flex-row flex-wrap">
             {tags.map((tag) => (
-              <span key={tag}>{tag}</span>
+              <ColoredTag key={tag} tag={tag} />
             ))}
-          </button>
+          </div>
         </div>
         <p className="text-lg leading-relaxed mb-4 px-2">{excerpt}</p>
       </Link>
