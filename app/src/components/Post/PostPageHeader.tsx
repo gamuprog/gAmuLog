@@ -1,12 +1,12 @@
 import { HomeHeaderItems } from "@/components/Home/HomeHeaderItems";
 import Link from "next/link";
 
-export function HomeHeader() {
+export function PostPageHeader() {
   return (
-    <div className="absolute w-full text-white">
+    <div className="fixed top-0 w-full bg-white border-b border-gray-200">
       <section className="mx-4 flex-col md:flex-row flex items-center md:justify-between">
         <Link href="/" className="flex flex-col items-center">
-          <div className="text-xl md:text-4xl font-bold tracking-tight leading-tight">
+          <div className="text-xl md:text-4xl font-bold tracking-tight leading-tighter">
             gAmuLog.
           </div>
           <div className="mr-2 text-sm">がむログ</div>

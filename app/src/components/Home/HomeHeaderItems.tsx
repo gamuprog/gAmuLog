@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IoIosSearch } from "react-icons/io";
 
 type Props = {
   className?: string;
@@ -30,6 +31,11 @@ export function HomeHeaderItems({ className }: Props) {
       <span>
         <Link href="/" className="hover:underline">
           お問い合わせ
+        </Link>
+      </span>
+      <span>
+        <Link href="/search" className="hover:underline text-2xl">
+          <IoIosSearch />
         </Link>
       </span>
     </div>

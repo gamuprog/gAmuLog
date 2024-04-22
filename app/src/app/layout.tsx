@@ -59,7 +59,9 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
-        <div className="min-h-screen">{children}</div>
+        <div className="min-h-screen text-dark-primary border-dark-primary">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
