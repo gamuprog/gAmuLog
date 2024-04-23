@@ -27,6 +27,7 @@ export function PostPreview({
   slug,
 }: Props) {
   const shadowVariants: { [key in ThemeColorVariant]: string } = {
+    red: "hover:shadow-red-200",
     blue: "hover:shadow-blue-200",
     green: "hover:shadow-green-200",
     orange: "hover:shadow-orange-200",
