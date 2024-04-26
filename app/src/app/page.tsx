@@ -1,5 +1,5 @@
-import { HomeHeader } from "@/components/Home/HomeHeader";
-import { HomeSection } from "@/components/Home/HomeSection";
+import { HomeHeader } from "@/components/home/HomeHeader";
+import { HomeSection } from "@/components/home/HomeSection";
 import { getAllPosts } from "@/lib/api";
 import React from "react";
 

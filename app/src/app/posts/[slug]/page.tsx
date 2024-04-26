@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
-import { PostBody } from "@/components/Post/post-body";
+import { PostBody } from "@/components/post/post-body";
 import { Sidebar } from "@/components/Sidebar";
-import { PostPageHeader } from "@/components/Post/PostPageHeader";
-import { PostTitle } from "@/components/Post/post-title";
+import { PostPageHeader } from "@/components/post/PostPageHeader";
+import { PostTitle } from "@/components/post/post-title";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
