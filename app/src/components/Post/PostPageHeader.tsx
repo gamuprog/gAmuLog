@@ -1,4 +1,4 @@
-import { HomeHeaderItems } from "@/components/Home/HomeHeaderItems";
+import { HomeHeaderItems } from "@/components/home/HomeHeaderItems";
 import Link from "next/link";
 
 export function PostPageHeader() {

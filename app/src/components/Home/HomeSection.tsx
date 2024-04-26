@@ -3,7 +3,7 @@ import { PostPreview } from "../PostPreview";
 import { ViewMoreButton } from "@/components/ViewMoreButton";
 import React from "react";
 
-export type ThemeColorVariant = "blue" | "green" | "orange";
+export type ThemeColorVariant = "red" | "blue" | "green" | "orange";
 type Props = {
   posts: Post[];
   className?: string;
@@ -22,6 +22,7 @@ export function HomeSection({
   maxPostsToShow = 3,
 }: Props) {
   const textVariants: { [key in ThemeColorVariant]: string } = {
+    red: "text-red-400",
     blue: "text-blue-400",
     green: "text-green-400",
     orange: "text-orange-400",
