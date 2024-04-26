@@ -1,8 +1,8 @@
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 import Image from "next/image";
-import { ThemeColorVariant } from "@/components/Home/HomeSection";
-import { ColoredTag } from "@/components/ColoredTag";
+import { ThemeColorVariant } from "@/components/home/HomeSection";
+import { ColoredTagCC } from "@/components/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";
 import { useRouter } from "next/navigation";
 import { MouseEvent } from "react";
@@ -27,6 +27,7 @@ export function PostPreview({
   slug,
 }: Props) {
   const shadowVariants: { [key in ThemeColorVariant]: string } = {
+    red: "hover:shadow-red-200",
     blue: "hover:shadow-blue-200",
     green: "hover:shadow-green-200",
     orange: "hover:shadow-orange-200",
@@ -34,7 +35,7 @@ export function PostPreview({
 
   return (
     <div
-      className={`rounded-md hover:shadow-sm shadow-transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
+      className={`rounded-md hover:shadow-sm transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
     >
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <div className="mb-5 overflow-hidden">
@@ -51,7 +52,7 @@ export function PostPreview({
           <DateFormatter dateString={date} />
           <div className="flex gap-2 flex-row flex-wrap">
             {tags.map((tag) => (
-              <ColoredTag key={tag} tag={tag} />
+              <ColoredTagCC key={tag} tag={tag} />
             ))}
           </div>
         </div>
