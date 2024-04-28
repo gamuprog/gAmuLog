@@ -1,5 +1,5 @@
 import { Post } from "@/interfaces/post";
-import { PostPreview } from "../PostPreview";
+import { PostPreview } from "../postPreview/PostPreview";
 import { ViewMoreButton } from "@/components/ViewMoreButton";
 import React from "react";
 

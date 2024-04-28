@@ -1,5 +1,5 @@
-import { PostPreview } from "@/components/PostPreview";
-import { PostPreviewForSidebar } from "@/components/PostPreviewForSidebar";
+import { PostPreview } from "@/components/postPreview/PostPreview";
+import { PostPreviewForSidebar } from "@/components/postPreview/PostPreviewForSidebar";
 import { Post } from "@/interfaces/post";
 
 type Props = {

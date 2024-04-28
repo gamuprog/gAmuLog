@@ -1,6 +1,6 @@
 "use client";
 import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
-import { PostPreview } from "@/components/PostPreview";
+import { PostPreview } from "@/components/postPreview/PostPreview";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { CheckBoxTag } from "@/components/search/CheckBoxTag";
 import { SearchInput } from "@/components/search/SearchInput";
@@ -29,8 +29,6 @@ export default function ArticleSearcher({ posts }: Props) {
   const [searchQueryCategory, setSearchQueryCategory] = useState<
     Category[] | null
   >(null);
-
-  const [isFilteredByCategory, setIsFilteredByCategory] = useState(false);
 
   const [isDetailSearchModalOpen, setIsDetailSearchModalOpen] = useState(false);
 
