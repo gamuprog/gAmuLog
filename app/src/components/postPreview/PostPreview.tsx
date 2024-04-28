@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DateFormatter from "./date-formatter";
+import DateFormatter from "../date-formatter";
 import Image from "next/image";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { ColoredTagCC } from "@/components/ColoredTagCC";
@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { MouseEvent } from "react";
 
 type Props = {
+  className?: string;
   themeColorVariant: ThemeColorVariant;
   title: string;
   coverImage: string;
@@ -18,6 +19,7 @@ type Props = {
 };
 
 export function PostPreview({
+  className = "",
   themeColorVariant,
   title,
   coverImage,
@@ -35,7 +37,7 @@ export function PostPreview({
 
   return (
     <div
-      className={`rounded-md hover:shadow-sm transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
+      className={`${className} rounded-md hover:shadow-sm transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
     >
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <div className="mb-5 overflow-hidden">
