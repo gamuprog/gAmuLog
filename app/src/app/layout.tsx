@@ -1,9 +1,9 @@
-import Footer from "@/components/Footer";
 import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_Antique } from "next/font/google";
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Zen_Kaku_Gothic_Antique({
   weight: ["300", "400", "500"],
