@@ -149,7 +149,7 @@ export default function ArticleSearcher({ posts }: Props) {
               className={`absolute top-[9px] text-2xl text-gray-500 cursor-pointer ${
                 searchQueryCategory === null || searchQueryCategory.length === 0
                   ? ""
-                  : "text-blue-600"
+                  : "!text-blue-600"
               }`}
             />
           </button>
