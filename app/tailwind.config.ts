@@ -26,6 +26,7 @@ const config: Config = {
       },
       letterSpacing: {
         tighter: "-.04em",
+        widest: ".3em",
       },
       fontSize: {
         "5xl": "2.5rem",
