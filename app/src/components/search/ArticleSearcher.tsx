@@ -138,8 +138,13 @@ export default function ArticleSearcher({ posts }: Props) {
           </div>
         </DetailSearchModalFrame>
       )}
-      <div className="mt-28 px-40">
-        <div className="text-center text-5xl">記事を検索する</div>
+      <div className="mt-36 px-40">
+        <div className="text-center text-3xl tracking-widest font-medium">
+          記事を検索する
+        </div>
+        <div className="text-center text-gray-400 tracking-widest mt-2">
+          SEARCH
+        </div>
         <div className="relative flex my-10 mx-40">
           <button type="button" onClick={handleClickDetailButton}>
             <BsSliders
@@ -167,7 +172,7 @@ export default function ArticleSearcher({ posts }: Props) {
             />
           ))}
         </div>
-        <div className="mt-10 grid grid-cols-3 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
+        <div className="my-10 grid grid-cols-3 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
           {searchResultsByQueryCategory.map((post) => (
             <PostPreview
               themeColorVariant={textVariants[post.category]}
