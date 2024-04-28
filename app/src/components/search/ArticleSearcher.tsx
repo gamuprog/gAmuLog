@@ -1,25 +1,67 @@
 "use client";
+import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
 import { PostPreview } from "@/components/PostPreview";
+import { ThemeColorVariant } from "@/components/home/HomeSection";
+import { CheckBoxTag } from "@/components/search/CheckBoxTag";
 import { SearchInput } from "@/components/search/SearchInput";
+import { Category } from "@/interfaces/category";
 import { Post } from "@/interfaces/post";
 import { Tag } from "@/interfaces/tag";
 import { useMemo, useState } from "react";
+import { BsSliders } from "react-icons/bs";
+import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
 
 type Props = {
   posts: Post[];
 };
 
 export default function ArticleSearcher({ posts }: Props) {
+  const textVariants: { [key in Category]: ThemeColorVariant } = {
+    Tech: "blue",
+    DevDiary: "green",
+    LifeStyle: "orange",
+  };
+
   const [searchQueryTags, setSearchQueryTags] = useState<Tag[] | null>(null);
 
   const [searchQueryText, setSearchQueryText] = useState<string | null>(null);
 
-  const tmpTags = posts.map((post) => post.tags).flat();
+  const [searchQueryCategory, setSearchQueryCategory] = useState<
+    Category[] | null
+  >(null);
 
-  const tags = Array.from(new Set(tmpTags));
+  const [isFilteredByCategory, setIsFilteredByCategory] = useState(false);
 
-  const handleChangeQueryText = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQueryText(e.target.value);
+  const [isDetailSearchModalOpen, setIsDetailSearchModalOpen] = useState(false);
+
+  const tags = Array.from(new Set(posts.map((post) => post.tags).flat()));
+
+  const categories = Array.from(
+    new Set(posts.map((post) => post.category).flat())
+  );
+
+  const handleChangeQueryText = (e: string) => {
+    setSearchQueryText(e);
+  };
+
+  const handleClickCategory = (category: Category) => {
+    setSearchQueryCategory((prevCategory) => {
+      if (prevCategory === null) {
+        return [category];
+      } else {
+        if (
+          !prevCategory.some(
+            (existingCategory) => existingCategory === category
+          )
+        ) {
+          return [...prevCategory, category];
+        } else {
+          return prevCategory.filter(
+            (existingCategory) => existingCategory !== category
+          );
+        }
+      }
+    });
   };
 
   const handleClickTag = (tag: Tag) => {
@@ -56,31 +98,90 @@ export default function ArticleSearcher({ posts }: Props) {
     }
   }, [searchQueryText, searchResults]);
 
-  console.log(searchQueryTags);
-  console.log(searchQueryText);
+  const searchResultsByQueryCategory = useMemo(() => {
+    if (searchQueryCategory === null || searchQueryCategory.length === 0) {
+      return searchResultsByQueryText;
+    } else {
+      return searchResultsByQueryText.filter((post) =>
+        searchQueryCategory.includes(post.category)
+      );
+    }
+  }, [searchQueryCategory, searchResultsByQueryText]);
+
+  const handleClickDetailButton = () => {
+    setIsDetailSearchModalOpen(true);
+  };
+
+  const handleClickDetailSearchModalClose = () => {
+    setIsDetailSearchModalOpen(false);
+  };
+
+  console.log(searchQueryCategory);
 
   return (
-    <>
-      <SearchInput className="m-10" onChange={handleChangeQueryText} />
-      {tags.map((tag) => (
-        <div key={tag}>
-          <button onClick={() => handleClickTag(tag)}>{tag}</button>
-        </div>
-      ))}
-      <div className="mt-10 flex">
-        {searchResultsByQueryText.map((post) => (
-          <PostPreview
-            themeColorVariant="red"
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            tags={post.tags}
-            slug={post.slug}
-            excerpt={post.excerpt}
+    <div>
+      {isDetailSearchModalOpen && (
+        <DetailSearchModalFrame
+          handleClickClose={handleClickDetailSearchModalClose}
+          categories={categories}
+        >
+          <div className="flex justify-between px-4">
+            {categories.map((category) => (
+              <CheckBoxCategory
+                key={category}
+                category={category}
+                isChecked={searchQueryCategory?.includes(category) ?? false}
+                onClick={handleClickCategory}
+                className="mr-2 mb-2"
+              />
+            ))}
+          </div>
+        </DetailSearchModalFrame>
+      )}
+      <div className="mt-28 px-40">
+        <div className="text-center text-5xl">記事を検索する</div>
+        <div className="relative flex my-10 mx-40">
+          <button type="button" onClick={handleClickDetailButton}>
+            <BsSliders
+              className={`absolute top-[9px] text-2xl text-gray-500 cursor-pointer ${
+                searchQueryCategory === null || searchQueryCategory.length === 0
+                  ? ""
+                  : "text-blue-600"
+              }`}
+            />
+          </button>
+          <SearchInput
+            className="ml-10 w-full"
+            onChange={handleChangeQueryText}
           />
-        ))}
+        </div>
+        <div className="ml-10 mb-4">
+          タグで絞り込む:
+          {tags.map((tag) => (
+            <CheckBoxTag
+              className="m-10"
+              key={tag}
+              tag={tag}
+              isChecked={searchQueryTags?.includes(tag) ?? false}
+              onClick={handleClickTag}
+            />
+          ))}
+        </div>
+        <div className="mt-10 grid grid-cols-3 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
+          {searchResultsByQueryCategory.map((post) => (
+            <PostPreview
+              themeColorVariant={textVariants[post.category]}
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              tags={post.tags}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
