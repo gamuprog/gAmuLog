@@ -9,17 +9,22 @@ export function HomeHeaderItems({ className }: Props) {
   return (
     <div className={`flex gap-8 mt-4 md:mt-0 ${className}`}>
       <span>
-        <Link href="/" className="hover:underline">
+        <Link href="/new" className="hover:underline">
+          最新記事
+        </Link>
+      </span>
+      <span>
+        <Link href="/tech" className="hover:underline">
           技術記事
         </Link>
       </span>
       <span>
-        <Link href="/" className="hover:underline">
+        <Link href="/dev-diary" className="hover:underline">
           開発日記
         </Link>
       </span>
       <span>
-        <Link href="/" className="hover:underline">
+        <Link href="/lifestyle-hobby" className="hover:underline">
           雑談
         </Link>
       </span>

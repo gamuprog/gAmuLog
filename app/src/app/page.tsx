@@ -27,6 +27,7 @@ export default function Index() {
         posts={allPosts}
         sectionTitleJa="最新記事"
         sectionTitleEn="New Articles"
+        viewMoreTo="/new"
       />
       <HomeSection
         themeColorVariant="blue"
@@ -34,12 +35,14 @@ export default function Index() {
         sectionTitleJa="技術記事"
         sectionTitleEn="Tech Articles"
         className="bg-gray-100"
+        viewMoreTo="/tech"
       />
       <HomeSection
         themeColorVariant="green"
         posts={allPosts.filter((post) => post.category === "DevDiary")}
         sectionTitleJa="開発日記"
         sectionTitleEn="Dev Diary"
+        viewMoreTo="/dev-diary"
       />
       <HomeSection
         themeColorVariant="orange"
@@ -47,6 +50,7 @@ export default function Index() {
         sectionTitleJa="雑談"
         sectionTitleEn="Lifestyle & Hobby"
         className="bg-gray-100"
+        viewMoreTo="/lifestyle-hobby"
       />
     </main>
   );
