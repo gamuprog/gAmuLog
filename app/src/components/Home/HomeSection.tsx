@@ -11,7 +11,7 @@ type Props = {
   sectionTitleEn: string;
   maxPostsToShow?: number;
   themeColorVariant: ThemeColorVariant;
-  viewMoreTo: string;
+  viewMoreTo?: string;
 };
 
 export function HomeSection({
@@ -52,7 +52,11 @@ export function HomeSection({
           />
         ))}
       </div>
-      <ViewMoreButton to={viewMoreTo} className="py-16" />
+      {viewMoreTo ? (
+        <ViewMoreButton to={viewMoreTo} className="py-16" />
+      ) : (
+        <div className="mt-16" />
+      )}
     </section>
   );
 }
