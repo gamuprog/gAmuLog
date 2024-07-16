@@ -27,7 +27,6 @@ export default function Index() {
         posts={allPosts}
         sectionTitleJa="最新記事"
         sectionTitleEn="New Articles"
-        viewMoreTo="/new"
       />
       <HomeSection
         themeColorVariant="blue"
