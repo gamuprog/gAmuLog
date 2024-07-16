@@ -11,8 +11,9 @@ export const ColoredTagCC = ({ tag }: Props) => {
   const router = useRouter();
 
   const handleClickTag = (e: MouseEvent, tag: Tag) => {
+    e.preventDefault();
     e.stopPropagation();
-    router.push(`/tags/${tag}`);
+    router.push(`/search?tag=${tag}`);
   };
 
   switch (tag) {

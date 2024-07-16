@@ -1,6 +1,6 @@
 "use client";
 import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
-import { PostPreview } from "@/components/PostPreview";
+import { PostPreview } from "@/components/postPreview/PostPreview";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { CheckBoxTag } from "@/components/search/CheckBoxTag";
 import { SearchInput } from "@/components/search/SearchInput";
@@ -10,6 +10,7 @@ import { Tag } from "@/interfaces/tag";
 import { useMemo, useState } from "react";
 import { BsSliders } from "react-icons/bs";
 import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
+import { useSearchParams } from "next/navigation";
 
 type Props = {
   posts: Post[];
@@ -22,15 +23,19 @@ export default function ArticleSearcher({ posts }: Props) {
     LifeStyle: "orange",
   };
 
-  const [searchQueryTags, setSearchQueryTags] = useState<Tag[] | null>(null);
+  const searchParams = useSearchParams();
+  const searchCategory = searchParams.get("category");
+  const searchTag = searchParams.get("tag");
+
+  const [searchQueryTags, setSearchQueryTags] = useState<Tag[] | null>(
+    searchTag ? [searchTag as Tag] : null
+  );
 
   const [searchQueryText, setSearchQueryText] = useState<string | null>(null);
 
   const [searchQueryCategory, setSearchQueryCategory] = useState<
     Category[] | null
-  >(null);
-
-  const [isFilteredByCategory, setIsFilteredByCategory] = useState(false);
+  >(searchCategory ? [searchCategory as Category] : null);
 
   const [isDetailSearchModalOpen, setIsDetailSearchModalOpen] = useState(false);
 
@@ -151,7 +156,7 @@ export default function ArticleSearcher({ posts }: Props) {
               className={`absolute top-[9px] text-2xl text-gray-500 cursor-pointer ${
                 searchQueryCategory === null || searchQueryCategory.length === 0
                   ? ""
-                  : "text-blue-600"
+                  : "!text-blue-600"
               }`}
             />
           </button>
