@@ -10,6 +10,7 @@ import { Tag } from "@/interfaces/tag";
 import { useMemo, useState } from "react";
 import { BsSliders } from "react-icons/bs";
 import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
+import { useSearchParams } from "next/navigation";
 
 type Props = {
   posts: Post[];
@@ -22,13 +23,19 @@ export default function ArticleSearcher({ posts }: Props) {
     LifeStyle: "orange",
   };
 
-  const [searchQueryTags, setSearchQueryTags] = useState<Tag[] | null>(null);
+  const searchParams = useSearchParams();
+  const searchCategory = searchParams.get("category");
+  const searchTag = searchParams.get("tag");
+
+  const [searchQueryTags, setSearchQueryTags] = useState<Tag[] | null>(
+    searchTag ? [searchTag as Tag] : null
+  );
 
   const [searchQueryText, setSearchQueryText] = useState<string | null>(null);
 
   const [searchQueryCategory, setSearchQueryCategory] = useState<
     Category[] | null
-  >(null);
+  >(searchCategory ? [searchCategory as Category] : null);
 
   const [isDetailSearchModalOpen, setIsDetailSearchModalOpen] = useState(false);
 

@@ -4,8 +4,6 @@ import Image from "next/image";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { ColoredTagCC } from "@/components/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";
-import { useRouter } from "next/navigation";
-import { MouseEvent } from "react";
 
 type Props = {
   className?: string;
