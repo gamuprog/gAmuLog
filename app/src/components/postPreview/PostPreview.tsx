@@ -5,6 +5,8 @@ import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { ColoredTagCC } from "@/components/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";
 
+export type CoverImageSizeVariant = "home" | "side";
+
 type Props = {
   className?: string;
   themeColorVariant: ThemeColorVariant;
@@ -14,6 +16,7 @@ type Props = {
   tags: Tag[];
   excerpt: string;
   slug: string;
+  coverImageSizeVariant?: CoverImageSizeVariant;
 };
 
 export function PostPreview({
@@ -25,6 +28,7 @@ export function PostPreview({
   tags,
   excerpt,
   slug,
+  coverImageSizeVariant = "home",
 }: Props) {
   const shadowVariants: { [key in ThemeColorVariant]: string } = {
     red: "hover:shadow-red-200",
@@ -33,12 +37,19 @@ export function PostPreview({
     orange: "hover:shadow-orange-200",
   };
 
+  const coverImageSizeVariants: { [key in CoverImageSizeVariant]: string } = {
+    home: "h-44",
+    side: "h-60",
+  };
+
   return (
     <div
       className={`${className} rounded-md hover:shadow-sm transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
     >
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <div className="mb-5 overflow-hidden">
+        <div
+          className={`rounded-t-md ${coverImageSizeVariants[coverImageSizeVariant]} flex items-center justify-center mb-5 overflow-hidden `}
+        >
           <Image
             src={coverImage}
             alt={title}
