@@ -46,6 +46,7 @@ export default function Index() {
                 tags={post.tags}
                 excerpt={post.excerpt}
                 slug={post.slug}
+                coverImageSizeVariant="side"
               />
             ))}
           </div>
