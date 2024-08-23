@@ -121,8 +121,6 @@ export default function ArticleSearcher({ posts }: Props) {
     setIsDetailSearchModalOpen(false);
   };
 
-  console.log(searchQueryCategory);
-
   return (
     <div>
       {isDetailSearchModalOpen && (

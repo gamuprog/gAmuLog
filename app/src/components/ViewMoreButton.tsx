@@ -5,7 +5,7 @@ type Props = {
   to: string;
 };
 
-export const ViewMoreButton = ({ to, className }: Props) => {
+export function ViewMoreButton({ to, className }: Props) {
   return (
     <div className={`flex justify-center ${className}`}>
       <Link
@@ -16,4 +16,4 @@ export const ViewMoreButton = ({ to, className }: Props) => {
       </Link>
     </div>
   );
-};
+}
