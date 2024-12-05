@@ -1,10 +1,10 @@
 ---
 title: "【合格体験記🖊️ 】フロントエンドエンジニア vs AWS(SAA-C03編)"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla"
+excerpt: "インフラ知識皆無男のAWS-SAA合格までの道のり🧗🏻‍♂️"
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
-date: "2100-03-17T05:35:07.322Z"
+date: "2024-11-06T05:35:07.322Z"
 category: "LifeStyle"
-tags: ["Tech", "Life"]
+tags: ["Infrastructure"]
 author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"

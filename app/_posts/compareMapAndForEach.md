@@ -1,10 +1,10 @@
 ---
 title: "【JS初級】#1 mapメソッドとforEachメソッドの違い・使い分け【3分解説】"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla"
+excerpt: "mapメソッドとforEachメソッドの正しい使い分けを紹介します！"
 coverImage: "/assets/blog/compareMapAndForEach/cover.webp"
-date: "2019-03-17T05:35:07.322Z"
+date: "2024-08-15T05:35:07.322Z"
 category: "Tech"
-tags: ["Tech", "Life"]
+tags: ["JavaScript", "TypeScript", "Programming"]
 author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
@@ -32,17 +32,15 @@ arrayA.forEach((elm) => {
 console.log(arrayA);
 ```
 
-Q.このコードを実行した際のコンソールの表示はどのようなものになりますか？
-
+:::details Q.このコードを実行した際のコンソールの表示はどのようなものになりますか？(トグルを開いて答えを表示)
 A.
 
 ```js
 [0, 1, 2, 3];
 ```
 
-<div class="message">
 非破壊的メソッドの`forEach`は、元の配列に変更を加えません。
-</div>
+:::
 
 ## 結論
 
@@ -57,12 +55,11 @@ A.
 どちらのメソッドも非破壊的メソッドなので、**元の配列が書き換えられることはありません**。先ほどの問題で出力結果が`[1, 2, 3, 4]`になると思ってしまった方もいたのではないでしょうか。
 (じゃあさっきの例題の `return elm += 1;` はなんだったのかというと、何でもないです。この返り値はどこにも保存されず、即破棄されます。)
 
-<div class="message">
-破壊的なメソッド: そのメソッドを使った際に、元の配列(オブジェクト)に変更が加わるもの。 ex)push,pop
+:::message
+破壊的なメソッド: そのメソッドを使った際に、元の配列(オブジェクト)に変更が加わるもの。 ex)`push`,`pop`
 
 非破壊的なメソッド: そのメソッドを使った際に、元の配列(オブジェクト)に変更が加わらないもの。
-
-</div>
+:::
 
 |        | map                          | forEach                          |
 | ------ | ---------------------------- | -------------------------------- |
