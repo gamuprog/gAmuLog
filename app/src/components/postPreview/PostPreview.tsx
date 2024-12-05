@@ -59,11 +59,13 @@ export function PostPreview({
           />
         </div>
         <h3 className="text-xl leading-snug px-2">{title}</h3>
-        <div className="text-sm text-gray-400 mb-2 px-2 flex justify-between">
+        <div className="text-sm text-gray-400 mb-2 mt-1 px-2 flex justify-between">
           <DateFormatter dateString={date} />
-          <div className="flex gap-2 flex-row flex-wrap">
+          <div className="flex flex-wrap gap-2 justify-end">
             {tags.map((tag) => (
-              <ColoredTagCC key={tag} tag={tag} />
+              <div key={tag}>
+                <ColoredTagCC tag={tag} key={tag} />
+              </div>
             ))}
           </div>
         </div>

@@ -11,6 +11,7 @@ import { useMemo, useState } from "react";
 import { BsSliders } from "react-icons/bs";
 import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
 import { useSearchParams } from "next/navigation";
+import { Button } from "@/components/Button";
 
 type Props = {
   posts: Post[];
@@ -121,12 +122,23 @@ export default function ArticleSearcher({ posts }: Props) {
     setIsDetailSearchModalOpen(false);
   };
 
+  const handleClickDeleteAllTagButton = () => {
+    setSearchQueryTags(null);
+  };
+
+  const handleClickDeleteAllCategoryButton = () => {
+    setSearchQueryCategory(null);
+  };
+
   return (
     <div>
       {isDetailSearchModalOpen && (
         <DetailSearchModalFrame
           handleClickClose={handleClickDetailSearchModalClose}
-          categories={categories}
+          handleClickDeleteAllCategoryButton={
+            handleClickDeleteAllCategoryButton
+          }
+          searchQueryCategory={searchQueryCategory}
         >
           <div className="flex justify-between px-4">
             {categories.map((category) => (
@@ -163,17 +175,32 @@ export default function ArticleSearcher({ posts }: Props) {
             onChange={handleChangeQueryText}
           />
         </div>
-        <div className="ml-10 mb-4">
-          タグで絞り込む:
-          {tags.map((tag) => (
-            <CheckBoxTag
-              className="m-10"
-              key={tag}
-              tag={tag}
-              isChecked={searchQueryTags?.includes(tag) ?? false}
-              onClick={handleClickTag}
-            />
-          ))}
+        <div className="ml-10 mb-4 flex">
+          <div className="w-36 min-w-36 flex flex-col">
+            <span>タグで絞り込む:</span>
+            <Button
+              onClick={handleClickDeleteAllTagButton}
+              className={`mt-2 ${
+                searchQueryTags == null || searchQueryTags.length == 0
+                  ? "border-gray-400 text-gray-400"
+                  : "border-black"
+              }`}
+              disabled={searchQueryTags == null || searchQueryTags.length == 0}
+            >
+              タグを全解除
+            </Button>
+          </div>
+          <div className="flex flex-wrap">
+            {tags.map((tag) => (
+              <CheckBoxTag
+                className="mx-10 mb-4"
+                key={tag}
+                tag={tag}
+                isChecked={searchQueryTags?.includes(tag) ?? false}
+                onClick={handleClickTag}
+              />
+            ))}
+          </div>
         </div>
         <div className="my-10 grid grid-cols-3 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
           {searchResultsByQueryCategory.map((post) => (
