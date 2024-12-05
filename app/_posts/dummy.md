@@ -1,10 +1,10 @@
 ---
-title: "【JS初級】#1 mapメソッドとforEachメソッドの違い・使い分け【3分解説】"
-excerpt: "mapメソッドとforEachメソッドの正しい使い分けを紹介します！"
+title: "Dummy"
+excerpt: "ダミー記事だ！こいつがいないと開発日記記事0でバグるぞ！"
 coverImage: "/assets/blog/compareMapAndForEach/cover.webp"
-date: "2024-08-15T05:35:07.322Z"
-category: "Tech"
-tags: ["JavaScript", "TypeScript", "Programming"]
+date: "2019-03-17T05:35:07.322Z"
+category: "DevDiary"
+tags: ["JavaScript", "TypeScript"]
 author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"

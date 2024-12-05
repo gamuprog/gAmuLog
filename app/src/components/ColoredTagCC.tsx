@@ -17,15 +17,6 @@ export const ColoredTagCC = ({ tag }: Props) => {
   };
 
   switch (tag) {
-    case "Tech":
-      return (
-        <span
-          className="hover:border hover:border-gray-800 hover:-m-[1px] text-sm bg-gray-200 text-gray-800 px-2 pb-[2px] rounded-full box-border"
-          onClick={(e) => handleClickTag(e, tag)}
-        >
-          Tech
-        </span>
-      );
     case "Life":
       return (
         <span
@@ -53,6 +44,86 @@ export const ColoredTagCC = ({ tag }: Props) => {
           onClick={(e) => handleClickTag(e, tag)}
         >
           JavaScript
+        </span>
+      );
+    case "TypeScript":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          TypeScript
+        </span>
+      );
+    case "React":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          React
+        </span>
+      );
+    case "Hooks":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          Hooks
+        </span>
+      );
+    case "Next":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          Next.js
+        </span>
+      );
+    case "Infrastructure":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          インフラ
+        </span>
+      );
+    case "AI":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          AI
+        </span>
+      );
+    case "CS":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          CS
+        </span>
+      );
+    case "Other":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          その他
         </span>
       );
   }

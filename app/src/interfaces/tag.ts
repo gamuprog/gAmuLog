@@ -1,1 +1,12 @@
-export type Tag = "Tech" | "Life" | "Programming" | "JavaScript" | "SampleTag";
+export type Tag =
+  | "Life"
+  | "Programming"
+  | "JavaScript"
+  | "TypeScript"
+  | "React"
+  | "Hooks"
+  | "Next"
+  | "Infrastructure"
+  | "AI"
+  | "CS"
+  | "Other";

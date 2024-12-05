@@ -2,11 +2,13 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
-import markdownToHtml from "@/lib/markdownToHtml";
+import markdownToHtml from "zenn-markdown-html";
+import "zenn-content-css";
 import { PostBody } from "@/components/Post/post-body";
 import { Sidebar } from "@/components/Sidebar";
 import { PostPageHeader } from "@/components/Post/PostPageHeader";
 import { PostTitle } from "@/components/Post/post-title";
+import Script from "next/script";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -21,12 +23,19 @@ export default async function Post({ params }: Params) {
     (p) => p.slug !== post.slug && p.tags.some((tag) => post.tags.includes(tag))
   );
 
-  const content = await markdownToHtml(post.content || "");
+  const content = markdownToHtml(post.content || "", {
+    embedOrigin: "https://embed.zenn.studio",
+  });
 
   return (
     <main>
       <PostPageHeader />
-      <article className="my-32 px-16">
+      <article className="my-32 px-16 znc">
+        <Script
+          src="https://embed.zenn.studio/js/listen-embed-event.js"
+          strategy="afterInteractive"
+        />
+
         <PostTitle>{post.title}</PostTitle>
         <div className="flex mx-16 justify-between">
           <PostBody

@@ -35,7 +35,7 @@ export function HomeSection({
       <h2 className="text-center text-xl md:text-4xl tracking-tight leading-tight">
         {sectionTitleJa}
       </h2>
-      <div className={` text-center mb-8 ${textVariants[themeColorVariant]}`}>
+      <div className={`text-center mb-8 ${textVariants[themeColorVariant]}`}>
         {sectionTitleEn}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-20 md:gap-y-32">

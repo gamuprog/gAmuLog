@@ -16,17 +16,31 @@ export const CheckBoxTag = ({
   className,
 }: Props) => {
   const tagStyleVariants: { [key in Tag]: string } = {
-    Tech: "bg-gray-200 text-gray-800 pb-[2px]",
     Life: "bg-green-200 text-green-800 py-[1px]",
     Programming: "bg-blue-200 text-blue-800 pb-[2px]",
     JavaScript: "bg-yellow-200 text-yellow-800 pb-[2px]",
+    TypeScript: "bg-yellow-200 text-yellow-800 pb-[2px]",
+    React: "bg-yellow-200 text-yellow-800 pb-[2px]",
+    Hooks: "bg-yellow-200 text-yellow-800 pb-[2px]",
+    Next: "bg-yellow-200 text-yellow-800 pb-[2px]",
+    Infrastructure: "bg-gray-200 text-gray-800 pb-[2px]",
+    AI: "bg-gray-200 text-gray-800 pb-[2px]",
+    CS: "bg-gray-200 text-gray-800 pb-[2px]",
+    Other: "bg-yellow-200 text-yellow-800 pb-[2px]",
   };
 
   const checkedTagStyleVariants: { [key in Tag]: string } = {
-    Tech: "border-2 border-gray-800 -m-[2px]",
     Life: "border-2 border-green-800 -m-[2px]",
     Programming: "border-2 border-blue-800 -m-[2px]",
     JavaScript: "border-2 border-yellow-800 -m-[2px]",
+    TypeScript: "border-2 border-yellow-800 -m-[2px]",
+    React: "border-2 border-yellow-800 -m-[2px]",
+    Hooks: "border-2 border-yellow-800 -m-[2px]",
+    Next: "border-2 border-yellow-800 -m-[2px]",
+    Infrastructure: "border-2 border-yellow-800 -m-[2px]",
+    AI: "border-2 border-yellow-800 -m-[2px]",
+    CS: "border-2 border-yellow-800 -m-[2px]",
+    Other: "border-2 border-yellow-800 -m-[2px]",
   };
   return (
     <div className={`${className} inline`}>

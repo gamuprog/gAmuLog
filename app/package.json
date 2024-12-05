@@ -24,7 +24,10 @@
     "remark-html": "^16.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
-    "unified": "^11.0.5"
+    "unified": "^11.0.5",
+    "zenn-content-css": "^0.1.131",
+    "zenn-markdown-html": "^0.1.131",
+    "zenn-embed-elements": "^0.1.131"
   },
   "devDependencies": {
     "@types/node": "^20",
