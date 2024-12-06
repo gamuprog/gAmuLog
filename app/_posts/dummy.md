@@ -4,7 +4,7 @@ excerpt: "ダミー記事だ！こいつがいないと開発日記記事0でバ
 coverImage: "/assets/blog/compareMapAndForEach/cover.webp"
 date: "2019-03-17T05:35:07.322Z"
 category: "DevDiary"
-tags: ["JavaScript", "TypeScript"]
+tags: ["JavaScript", "TypeScript", "Next"]
 author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"

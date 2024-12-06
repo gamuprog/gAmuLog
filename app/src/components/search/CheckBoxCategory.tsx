@@ -16,15 +16,15 @@ export const CheckBoxCategory = ({
   className,
 }: Props) => {
   const categoryStyleVariants: { [key in Category]: string } = {
-    Tech: "bg-gray-200 text-gray-800 pb-[2px]",
+    Tech: "bg-blue-200 text-blue-800 pb-[2px]",
     DevDiary: "bg-green-200 text-green-800 py-[1px]",
-    LifeStyle: "bg-blue-200 text-blue-800 pb-[2px]",
+    LifeStyle: "bg-orange-200 text-orange-800 pb-[2px]",
   };
 
   const checkedCategoryStyleVariants: { [key in Category]: string } = {
-    Tech: "border-2 border-gray-800 -m-[2px]",
+    Tech: "border-2 border-blue-800 -m-[2px]",
     DevDiary: "border-2 border-green-800 -m-[2px]",
-    LifeStyle: "border-2 border-blue-800 -m-[2px]",
+    LifeStyle: "border-2 border-orange-800 -m-[2px]",
   };
 
   return (
