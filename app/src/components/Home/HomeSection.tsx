@@ -12,6 +12,7 @@ type Props = {
   maxPostsToShow?: number;
   themeColorVariant: ThemeColorVariant;
   viewMoreTo?: string;
+  viewMoreText?: string;
 };
 
 export function HomeSection({
@@ -22,6 +23,7 @@ export function HomeSection({
   sectionTitleEn,
   maxPostsToShow = 3,
   viewMoreTo,
+  viewMoreText,
 }: Props) {
   const textVariants: { [key in ThemeColorVariant]: string } = {
     red: "text-red-400",
@@ -53,7 +55,11 @@ export function HomeSection({
         ))}
       </div>
       {viewMoreTo ? (
-        <ViewMoreButton to={viewMoreTo} className="py-16" />
+        <ViewMoreButton
+          to={viewMoreTo}
+          buttonText={viewMoreText}
+          className="py-16"
+        />
       ) : (
         <div className="mt-16" />
       )}

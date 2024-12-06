@@ -38,7 +38,7 @@ export function HeroPostPreview({
       className={`${className} rounded-md hover:shadow-sm transition-shadow duration-300 ease-in-out ${shadowVariants[themeColorVariant]}`}
     >
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
-        <div className="mb-5 overflow-hidden">
+        <div className="mb-5 overflow-hidden max-h-[30rem] flex items-center">
           <Image
             src={coverImage}
             alt={title}

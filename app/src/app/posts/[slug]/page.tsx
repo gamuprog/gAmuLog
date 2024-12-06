@@ -23,6 +23,13 @@ export default async function Post({ params }: Params) {
     (p) => p.slug !== post.slug && p.tags.some((tag) => post.tags.includes(tag))
   );
 
+  const recommendedPosts = allPosts.filter(
+    (p) =>
+      p.slug !== post.slug &&
+      (p.slug === "react-tutorial-useEffect" ||
+        p.slug === "react-tutorial-useMemo")
+  );
+
   const content = markdownToHtml(post.content || "", {
     embedOrigin: "https://embed.zenn.studio",
   });
@@ -45,7 +52,10 @@ export default async function Post({ params }: Params) {
             coverImage={post.coverImage}
             content={content}
           />
-          <Sidebar posts={relatedPosts} />
+          <Sidebar
+            relatedPosts={relatedPosts}
+            recommendedPosts={recommendedPosts}
+          />
         </div>
       </article>
     </main>

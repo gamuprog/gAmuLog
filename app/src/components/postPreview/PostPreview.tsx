@@ -39,7 +39,7 @@ export function PostPreview({
 
   const coverImageSizeVariants: { [key in CoverImageSizeVariant]: string } = {
     home: "h-44",
-    side: "h-60",
+    side: "max-h-60",
   };
 
   return (
