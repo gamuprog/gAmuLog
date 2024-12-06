@@ -1,4 +1,4 @@
-import { ColoredTagSC } from "@/components/ColoredTagSC";
+import { ColoredTagSC } from "@/components/Tag/ColoredTagSC";
 import CoverImageForArticle from "@/components/CoverImageForArticle";
 import DateFormatter from "@/components/date-formatter";
 import markdownStyles from "@/components/markdown-styles.module.css";

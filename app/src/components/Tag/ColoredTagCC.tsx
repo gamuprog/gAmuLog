@@ -50,7 +50,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-blue-800 hover:-m-[1px] text-sm bg-blue-200 text-blue-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           TypeScript
@@ -60,7 +60,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-sky-800 hover:-m-[1px] text-sm bg-sky-200 text-sky-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           React
@@ -70,7 +70,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-sky-800 hover:-m-[1px] text-sm bg-sky-200 text-sky-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           Hooks
@@ -80,7 +80,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-gray-800 hover:-m-[1px] text-sm bg-gray-200 text-gray-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           Next.js
@@ -90,7 +90,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-gray-800 hover:-m-[1px] text-sm bg-gray-200 text-gray-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           インフラ
@@ -100,7 +100,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-indigo-800 hover:-m-[1px] text-sm bg-indigo-200 text-indigo-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           AI
@@ -110,7 +110,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-violet-800 hover:-m-[1px] text-sm bg-violet-200 text-violet-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           CS
@@ -120,7 +120,7 @@ export const ColoredTagCC = ({ tag }: Props) => {
       return (
         <span
           style={{ boxSizing: "border-box" }}
-          className="hover:border hover:border-yellow-800 hover:-m-[1px] text-sm bg-yellow-200 text-yellow-800 px-2 pb-[2px] rounded-full"
+          className="hover:border hover:border-gray-800 hover:-m-[1px] text-sm bg-gray-200 text-gray-800 px-2 pb-[2px] rounded-full"
           onClick={(e) => handleClickTag(e, tag)}
         >
           その他
