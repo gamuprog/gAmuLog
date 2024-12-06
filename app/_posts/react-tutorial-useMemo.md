@@ -1,13 +1,13 @@
 ---
 title: "【React入門】絶対に理解させる(たい)useMemo【初学者向け】"
 excerpt: "React Hooksの内の一つ,useMemoを初学者にもわかりやすく解説！"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/sample.jpg"
 date: "2024-08-20T08:35:07.322Z"
 category: "Tech"
 tags: ["React", "Hooks", "Programming"]
 author:
   name: JJ Kasper
-  picture: "/assets/blog/authors/jj.jpeg"
+  picture: "/assets/blog/sample.jpg"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
