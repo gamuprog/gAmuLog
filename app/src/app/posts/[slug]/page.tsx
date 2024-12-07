@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "zenn-markdown-html";
 import "zenn-content-css";
 import { PostBody } from "@/components/post/PostBody";
@@ -75,13 +74,22 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = post.title;
+  const description = post.excerpt;
 
   return {
     title,
+    description,
     openGraph: {
       title,
+      description,
+      type: "article",
       images: [post.ogImage.url],
+    },
+    twitter: {
+      title,
+      description,
+      images: [post.coverImage],
     },
   };
 }
