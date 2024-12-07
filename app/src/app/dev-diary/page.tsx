@@ -1,5 +1,5 @@
 import { ViewMoreButton } from "@/components/button/ViewMoreButton";
-import { PostPageHeader } from "@/components/post/PostPageHeader";
+import { PostPageHeader } from "@/components/posting/PostPageHeader";
 import { HeroPostPreview } from "@/components/postPreview/HeroPostPreview";
 import { PostPreview } from "@/components/postPreview/PostPreview";
 import { getAllPosts } from "@/lib/api";
