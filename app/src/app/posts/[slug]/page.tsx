@@ -82,7 +82,14 @@ export function generateMetadata({ params }: Params): Metadata {
     description,
     openGraph: {
       title,
+      description,
+      type: "article",
       images: [post.ogImage.url],
+    },
+    twitter: {
+      title,
+      description,
+      images: [post.coverImage],
     },
   };
 }
@@ -94,23 +101,3 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
-
-// {
-//   "name": "Next.js",
-//   "short_name": "Next.js",
-//   "icons": [
-//     {
-//       "src": "/favicons/android-chrome-192x192.png",
-//       "sizes": "192x192",
-//       "type": "image/png"
-//     },
-//     {
-//       "src": "/favicons/android-chrome-512x512.png",
-//       "sizes": "512x512",
-//       "type": "image/png"
-//     }
-//   ],
-//   "theme_color": "#000000",
-//   "background_color": "#000000",
-//   "display": "standalone"
-// }

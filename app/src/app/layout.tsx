@@ -10,10 +10,17 @@ const inter = Zen_Kaku_Gothic_Antique({
   subsets: ["latin"],
 });
 
+const title = "がむログ";
+const description =
+  "がむの技術ブログです。React,Next.jsなどプログラミングの技術記事や開発日記、趣味の話題などを書いています。";
+
 export const metadata: Metadata = {
-  title: `がむログ`,
-  description: `がむの技術ブログです。React,Next.jsなどプログラミングの技術記事や開発日記、趣味の話題などを書いています。`,
+  title,
+  description,
   openGraph: {
+    title,
+    description,
+    type: "website",
     images: [HOME_OG_IMAGE_URL],
   },
 };
