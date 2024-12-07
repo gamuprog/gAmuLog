@@ -1,7 +1,7 @@
 ---
 title: "【React入門】絶対に理解させる(たい)useEffect【初中級者向け】"
 excerpt: "一癖も二癖もあるReactのuseEffectをわかりやすく解説！"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/react-tutorial-useEffect/useEffect.png"
 date: "2024-08-21T05:35:07.322Z"
 category: "Tech"
 tags: ["React", "Hooks", "Programming"]

@@ -1,7 +1,7 @@
 ---
 title: "新時代のコードエディタ、Cursorのメリット・できることを網羅的に解説した"
 excerpt: "新時代のAIコードエディタだ👀"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/cursor/cursor.png"
 date: "2023-11-22T05:35:07.322Z"
 category: "Tech"
 tags: ["Programming", "Other", "AI"]
