@@ -23,14 +23,14 @@ export function FooterItems({ className }: Props) {
         </Link>
       </span>
       <span>
-        <Link href="/" className="hover:underline">
-          about me
-        </Link>
+        {/* <Link href="/" className="hover:underline"> */}
+        about me(作成中🚧)
+        {/* </Link> */}
       </span>
       <span>
-        <Link href="/" className="hover:underline">
-          お問い合わせ
-        </Link>
+        {/* <Link href="/" className="hover:underline"> */}
+        お問い合わせ(作成中🚧)
+        {/* </Link> */}
       </span>
     </div>
   );
