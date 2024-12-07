@@ -11,7 +11,7 @@ import { useMemo, useState } from "react";
 import { BsSliders } from "react-icons/bs";
 import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
 import { useSearchParams } from "next/navigation";
-import { Button } from "@/components/Button";
+import { Button } from "@/components/button/Button";
 
 type Props = {
   posts: Post[];

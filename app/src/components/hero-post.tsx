@@ -2,7 +2,7 @@ import Avatar from "@/components/avatar";
 import CoverImageForPreview from "@/components/CoverImageForPreview";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
-import DateFormatter from "./date-formatter";
+import DateFormatter from "./dateFormatter";
 
 type Props = {
   title: string;
