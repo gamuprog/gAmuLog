@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ColoredTagCC } from "@/components/Tag/ColoredTagCC";
+import { ColoredTagCC } from "@/components/tag/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";
 
 type Props = {

@@ -1,4 +1,4 @@
-import { FooterItems } from "@/components/FooterItems";
+import { FooterItems } from "@/components/footer/FooterItems";
 import Link from "next/link";
 import { SiZenn } from "react-icons/si";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";

@@ -2,7 +2,7 @@ import Link from "next/link";
 import DateFormatter from "../date-formatter";
 import Image from "next/image";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
-import { ColoredTagCC } from "@/components/Tag/ColoredTagCC";
+import { ColoredTagCC } from "@/components/tag/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";
 
 export type CoverImageSizeVariant = "home" | "side";

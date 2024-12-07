@@ -1,6 +1,6 @@
 import { Post } from "@/interfaces/post";
 import { PostPreview } from "../postPreview/PostPreview";
-import { ViewMoreButton } from "@/components/ViewMoreButton";
+import { ViewMoreButton } from "@/components/button/ViewMoreButton";
 import React from "react";
 
 export type ThemeColorVariant = "red" | "blue" | "green" | "orange";

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_Antique } from "next/font/google";
 import "highlight.js/styles/hybrid.css";
 import "./globals.css";
-import Footer from "@/components/footer";
+import Footer from "@/components/footer/Footer";
 
 const inter = Zen_Kaku_Gothic_Antique({
   weight: ["300", "400", "500"],
