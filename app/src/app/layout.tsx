@@ -1,4 +1,4 @@
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_Antique } from "next/font/google";
 import "highlight.js/styles/hybrid.css";
@@ -11,12 +11,14 @@ const inter = Zen_Kaku_Gothic_Antique({
 });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `がむログ`,
+  description: `がむの技術ブログです。React,Next.jsなどプログラミングの技術記事や開発日記、趣味の話題などを書いています。`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
 };
+
+// TODO: faviconのキャッシュ回避のためにv=1を追加しているが、最終的には削除する
 
 export default function RootLayout({
   children,
@@ -29,27 +31,28 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
+          href="/favicon/apple-touch-icon.png?v=1"
         />
+        <link rel="icon" href="/favicon/favicon.ico?v=1" />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon/favicon-32x32.png"
+          href="/favicon/favicon-32x32.png?v=1"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon/favicon-16x16.png"
+          href="/favicon/favicon-16x16.png?v=1"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
           rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
+          href="/favicon/safari-pinned-tab.svg?v=1"
           color="#000000"
         />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico?v=1" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="msapplication-config"

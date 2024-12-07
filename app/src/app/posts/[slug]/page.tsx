@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "zenn-markdown-html";
 import "zenn-content-css";
 import { PostBody } from "@/components/post/PostBody";
@@ -75,10 +74,12 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = post.title;
+  const description = post.excerpt;
 
   return {
     title,
+    description,
     openGraph: {
       title,
       images: [post.ogImage.url],
@@ -93,3 +94,23 @@ export async function generateStaticParams() {
     slug: post.slug,
   }));
 }
+
+// {
+//   "name": "Next.js",
+//   "short_name": "Next.js",
+//   "icons": [
+//     {
+//       "src": "/favicons/android-chrome-192x192.png",
+//       "sizes": "192x192",
+//       "type": "image/png"
+//     },
+//     {
+//       "src": "/favicons/android-chrome-512x512.png",
+//       "sizes": "512x512",
+//       "type": "image/png"
+//     }
+//   ],
+//   "theme_color": "#000000",
+//   "background_color": "#000000",
+//   "display": "standalone"
+// }
