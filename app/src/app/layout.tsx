@@ -1,4 +1,3 @@
-import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Zen_Kaku_Gothic_Antique } from "next/font/google";
 import "highlight.js/styles/hybrid.css";
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
     title,
     description,
     type: "website",
-    images: [HOME_OG_IMAGE_URL],
+    images: "/assets/home/homeOG.jpg", // TODO: 上手くできているか確認
   },
 };
 
