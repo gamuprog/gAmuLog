@@ -1,7 +1,7 @@
 ---
 title: "👨‍💼「並列処理と並行処理の違いはなんですか？JSの非同期処理はどちらに該当しますか？」"
 excerpt: "並列処理と並行処理の違いを解説！シングルコア・マルチコアCPUの違いもこれで解決！"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/parallel/parallel_cover.jpg"
 date: "2024-08-17T05:35:07.322Z"
 category: "Tech"
 tags: ["Other", "CS"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/blog/parallel/parallel_cover.jpg"
 ---
 
 ## まえがき

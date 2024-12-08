@@ -1,7 +1,7 @@
 ---
 title: "React(TS)のユニオン×リテラル型を用いて単一コンポーネントから複数のCSSを出し分ける"
 excerpt: "ユニオン×リテラル型を利用してReactコンポーネントの再利用性を向上させましょう💪🏻"
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
+coverImage: "/assets/blog/react-union-literal/react-css_cover.jpg"
 date: "2024-08-20T05:35:07.322Z"
 category: "Tech"
 tags: ["React", "TypeScript", "Programming"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/blog/react-union-literal/react-css_cover.jpg"
 ---
 
 ## まえがき

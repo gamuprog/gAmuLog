@@ -1,7 +1,7 @@
 ---
 title: "Dummy"
 excerpt: "ダミー記事だ！こいつがいないと開発日記記事0でバグるぞ！"
-coverImage: "/assets/blog/compareMapAndForEach/cover.webp"
+coverImage: "/assets/blog/freelance/freelance_cover.jpg"
 date: "2019-03-17T05:35:07.322Z"
 category: "DevDiary"
 tags: ["JavaScript", "TypeScript", "Next"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/compareMapAndForEach/cover.webp"
+  url: "/assets/blog/freelance/freelance_cover.jpg"
 ---
 
 ## まえがき
