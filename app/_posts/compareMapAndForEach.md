@@ -1,7 +1,7 @@
 ---
 title: "【JS初級】#1 mapメソッドとforEachメソッドの違い・使い分け【3分解説】"
 excerpt: "mapメソッドとforEachメソッドの正しい使い分けを紹介します！"
-coverImage: "/assets/blog/compareMapAndForEach/cover.webp"
+coverImage: "/assets/blog/compareMapAndForEach/map-forEach_cover.jpg"
 date: "2024-08-15T05:35:07.322Z"
 category: "Tech"
 tags: ["JavaScript", "TypeScript", "Programming"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/compareMapAndForEach/cover.webp"
+  url: "/assets/blog/compareMapAndForEach/map-forEach_cover.jpg"
 ---
 
 ## まえがき

@@ -1,7 +1,7 @@
 ---
 title: "フリーランス・個人事業主・1人親方(法人)の違いと経理(税金)"
 excerpt: "フリーランス・個人事業主・1人親方(法人)の税金の違いを解説！"
-coverImage: "/assets/blog/compareMapAndForEach/cover.webp"
+coverImage: "/assets/blog/freelance/freelance_cover.jpg"
 date: "2023-10-22T05:35:07.322Z"
 category: "LifeStyle"
 tags: ["Life", "Other"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/compareMapAndForEach/cover.webp"
+  url: "/assets/blog/freelance/freelance_cover.jpg"
 ---
 
 :::message
