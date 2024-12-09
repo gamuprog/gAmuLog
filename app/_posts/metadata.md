@@ -173,7 +173,7 @@ Next.js ではすべてのページに自動的に
 
 ![](https://storage.googleapis.com/zenn-user-upload/9cdc10cd7f3c-20241209.png)
 
-<title>タグや、<meta description>、<meta og>が特定の記事の内容と一致しており、動的に設定されていることが確認できた。<meta charset="utf-8">,<meta name="viewport" content="width=device-width, initial-scale=1">も自動的に生成されている。
+`<title>`タグや、`<meta description>`、`<meta og>`が特定の記事の内容と一致しており、動的に設定されていることが確認できた。`<meta charset="utf-8">`,`<meta name="viewport" content="width=device-width, initial-scale=1">`も自動的に生成されている。
 
 ## おわりに
 
