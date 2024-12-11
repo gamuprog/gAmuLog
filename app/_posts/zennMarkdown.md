@@ -1,7 +1,7 @@
 ---
 title: "Next.js App RouterにおけるZenn記法Markdown→HTML変換処理"
 excerpt: "Next.js App Routerで作られたブログサイトに、MarkdownからZenn風のCSSを自動的につけられるようにした🌼"
-coverImage: "/assets/blog/AWS-SAA/AWSSAA_cover.jpg" // TODO 差し替える
+coverImage: "/assets/blog/AWS-SAA/AWSSAA_cover.jpg"
 date: "2024-12-11T05:35:07.322Z"
 category: "DevDiary"
 tags: ["Next"]
