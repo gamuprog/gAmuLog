@@ -2,6 +2,7 @@ import { FooterItems } from "@/components/footer/FooterItems";
 import Link from "next/link";
 import { SiZenn } from "react-icons/si";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { externalURL } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -16,22 +17,18 @@ export function Footer() {
         <FooterItems />
       </div>
       <div className="mt-8 mx-[36rem] flex justify-between">
-        <Link
-          href="https://zenn.dev/gamuprog"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={externalURL.zenn} target="_blank" rel="noopener noreferrer">
           <SiZenn className="text-6xl" />
         </Link>
         <Link
-          href="https://twitter.com/gamu_prog"
+          href={externalURL.twitter}
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaXTwitter className="text-6xl" />
         </Link>
         <Link
-          href="https://github.com/gamuprog"
+          href={externalURL.github}
           target="_blank"
           rel="noopener noreferrer"
         >
