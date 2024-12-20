@@ -1,13 +1,15 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import Script from "next/script";
 import markdownToHtml from "zenn-markdown-html";
-import "zenn-content-css";
-import { PostBody } from "@/components/post/PostBody";
+
 import { Sidebar } from "@/components/Sidebar";
+import { PostBody } from "@/components/post/PostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
-import Script from "next/script";
+import { getAllPosts, getPostBySlug } from "@/lib/api";
+
+import "zenn-content-css";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);

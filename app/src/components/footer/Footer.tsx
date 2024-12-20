@@ -1,7 +1,8 @@
-import { FooterItems } from "@/components/footer/FooterItems";
 import Link from "next/link";
-import { SiZenn } from "react-icons/si";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { SiZenn } from "react-icons/si";
+
+import { FooterItems } from "@/components/footer/FooterItems";
 import { externalURL } from "@/lib/constants";
 
 export function Footer() {

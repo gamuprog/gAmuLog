@@ -1,9 +1,10 @@
+import React from "react";
+
 import { ViewMoreButton } from "@/components/button/ViewMoreButton";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { HeroPostPreview } from "@/components/postPreview/HeroPostPreview";
 import { PostPreview } from "@/components/postPreview/PostPreview";
 import { getAllPosts } from "@/lib/api";
-import React from "react";
 
 export default function Index() {
   const allPosts = getAllPosts();

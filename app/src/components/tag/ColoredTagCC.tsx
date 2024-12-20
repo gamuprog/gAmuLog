@@ -1,7 +1,8 @@
 "use client";
-import { Tag } from "@/interfaces/tag";
 import { useRouter } from "next/navigation";
 import { MouseEvent } from "react";
+
+import { Tag } from "@/interfaces/tag";
 
 type Props = {
   tag: Tag;
