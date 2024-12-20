@@ -1,7 +1,7 @@
 ---
 title: "【合格体験記🖊️ 】フロントエンドエンジニア vs AWS(SAA-C03編)"
 excerpt: "インフラ知識皆無男のAWS-SAA合格までの道のり🧗🏻‍♂️"
-coverImage: "/assets/blog/AWS-SAA/AWSSAA_cover.jpg"
+coverImage: "/assets/blog/AWS-SAA/AWSSAA_cover.webp"
 date: "2024-11-06T05:35:07.322Z"
 category: "LifeStyle"
 tags: ["Infrastructure"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/AWS-SAA/AWSSAA_cover.jpg"
+  url: "/assets/blog/AWS-SAA/AWSSAA_cover.webp"
 ---
 
 ## まえがき 🖊️

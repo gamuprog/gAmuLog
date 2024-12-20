@@ -1,7 +1,7 @@
 ---
 title: "【TS中級】#2 stringのユニオン×リテラル型で型安全な開発を【実務で頻出】"
 excerpt: "型安全なコードを書くためにユニオン×リテラルは必須です🫣"
-coverImage: "/assets/blog/union-literal/union-literal_cover.jpg"
+coverImage: "/assets/blog/union-literal/union-literal_cover.webp"
 date: "2024-08-17T05:35:07.322Z"
 category: "Tech"
 tags: ["JavaScript", "TypeScript", "Programming"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/union-literal/union-literal_cover.jpg"
+  url: "/assets/blog/union-literal/union-literal_cover.webp"
 ---
 
 ## まえがき
