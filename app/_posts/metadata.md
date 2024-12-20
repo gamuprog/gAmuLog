@@ -1,7 +1,7 @@
 ---
 title: "Next.js App Routerでのmetadata設定とSEO対策"
 excerpt: "App Routerでの動的・静的なmetadata設定を行ったのでコード例とともに解説します。"
-coverImage: "/assets/blog/metadata/metadata_cover.jpg"
+coverImage: "/assets/blog/metadata/metadata_cover.webp"
 date: "2024-12-08T05:35:07.322Z"
 category: "DevDiary"
 tags: ["TypeScript", "Next"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/metadata/metadata_cover.jpg"
+  url: "/assets/blog/metadata/metadata_cover.webp"
 ---
 
 ## SEO 対策の話
