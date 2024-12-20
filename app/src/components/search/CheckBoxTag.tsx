@@ -1,6 +1,7 @@
-import { Tag } from "@/interfaces/tag";
 import React from "react";
+
 import { tagToStringForViewer } from "@/functional/tagToStringForViewer";
+import { Tag } from "@/interfaces/tag";
 
 type Props = {
   tag: Tag;

@@ -1,7 +1,8 @@
-import { Post } from "@/interfaces/post";
-import { PostPreview } from "../postPreview/PostPreview";
-import { ViewMoreButton } from "@/components/button/ViewMoreButton";
 import React from "react";
+
+import { ViewMoreButton } from "@/components/button/ViewMoreButton";
+import { PostPreview } from "@/components/postPreview/PostPreview";
+import { Post } from "@/interfaces/post";
 
 export type ThemeColorVariant = "red" | "blue" | "green" | "orange";
 type Props = {

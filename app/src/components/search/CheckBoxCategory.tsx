@@ -1,5 +1,6 @@
-import { Category, categories } from "@/interfaces/category";
 import React from "react";
+
+import { Category, categories } from "@/interfaces/category";
 
 type Props = {
   category: Category;

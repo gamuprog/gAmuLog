@@ -1,6 +1,6 @@
-import { Tag } from "@/interfaces/tag";
-import { type Author } from "./author";
+import { Author } from "@/interfaces/author";
 import { Category } from "@/interfaces/category";
+import { Tag } from "@/interfaces/tag";
 
 export type Post = {
   slug: string;

@@ -1,6 +1,7 @@
-import Link from "next/link";
-import DateFormatter from "../dateFormatter";
 import Image from "next/image";
+import Link from "next/link";
+
+import DateFormatter from "@/components/dateFormatter";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { ColoredTagCC } from "@/components/tag/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";

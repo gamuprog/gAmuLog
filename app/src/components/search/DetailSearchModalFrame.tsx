@@ -1,9 +1,10 @@
 "use client";
+import { ReactNode, useRef } from "react";
+import { RxCross2 } from "react-icons/rx";
+
 import { Button } from "@/components/button/Button";
 import { useClickOutside } from "@/components/hooks/clickOutsider";
 import { Category } from "@/interfaces/category";
-import { ReactNode, useRef } from "react";
-import { RxCross2 } from "react-icons/rx";
 
 type Props = {
   handleClickClose: () => void;

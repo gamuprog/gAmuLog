@@ -1,5 +1,6 @@
-import { Tag } from "@/interfaces/tag";
 import Link from "next/link";
+
+import { Tag } from "@/interfaces/tag";
 
 type Props = {
   tag: Tag;

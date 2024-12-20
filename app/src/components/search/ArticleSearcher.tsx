@@ -1,17 +1,18 @@
 "use client";
-import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
-import { PostPreview } from "@/components/postPreview/PostPreview";
+import { useSearchParams } from "next/navigation";
+import { useMemo, useState } from "react";
+import { BsSliders } from "react-icons/bs";
+
+import { Button } from "@/components/button/Button";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
+import { PostPreview } from "@/components/postPreview/PostPreview";
+import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
 import { CheckBoxTag } from "@/components/search/CheckBoxTag";
+import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
 import { SearchInput } from "@/components/search/SearchInput";
 import { Category } from "@/interfaces/category";
 import { Post } from "@/interfaces/post";
 import { Tag } from "@/interfaces/tag";
-import { useMemo, useState } from "react";
-import { BsSliders } from "react-icons/bs";
-import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
-import { useSearchParams } from "next/navigation";
-import { Button } from "@/components/button/Button";
 
 type Props = {
   posts: Post[];

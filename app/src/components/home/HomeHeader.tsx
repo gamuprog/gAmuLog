@@ -1,5 +1,6 @@
-import { HomeHeaderItems } from "@/components/home/HomeHeaderItems";
 import Link from "next/link";
+
+import { HomeHeaderItems } from "@/components/home/HomeHeaderItems";
 
 export function HomeHeader() {
   return (

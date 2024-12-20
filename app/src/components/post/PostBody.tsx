@@ -1,7 +1,7 @@
-import { ColoredTagSC } from "@/components/tag/ColoredTagSC";
 import CoverImageForArticle from "@/components/CoverImageForArticle";
 import DateFormatter from "@/components/dateFormatter";
 import markdownStyles from "@/components/markdown-styles.module.css";
+import { ColoredTagSC } from "@/components/tag/ColoredTagSC";
 import { Tag } from "@/interfaces/tag";
 
 type Props = {
