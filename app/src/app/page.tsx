@@ -11,7 +11,7 @@ export default function Index() {
       <div
         className="bg-fixed flex flex-col justify-center items-center text-white"
         style={{
-          backgroundImage: "url('/assets/home/home.jpg')",
+          backgroundImage: "url('/assets/home/home_min.webp')",
           width: "100vw",
           height: "95vh",
           backgroundSize: "cover",
