@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://www.gamulog.com/</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/tech</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/dev-diary</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/lifestyle-hobby</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/deploy</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/lighthouse</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/zennMarkdown</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/react-tutorial-useEffect</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/react-tutorial-useMemo</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/react-union-literal</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/AWS_SAA</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/freelance_tax</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/parallel-computing</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/union-literal</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/compareMapAndForEach</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/cursor</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?category=Tech</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/posts/metadata</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?category=DevDiary</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?category=LifeStyle</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=Next</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=React</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=Hooks</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=Programming</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=TypeScript</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/union-literal</loc>
+  <lastmod>2025-01-01T10:26:43+09:00</lastmod>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=Infrastructure</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=Life</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=Other</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=CS</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=JavaScript</loc>
+</url>
+<url>
+  <loc>https://www.gamulog.com/search?tag=AI</loc>
+</url>
+
+</urlset>
