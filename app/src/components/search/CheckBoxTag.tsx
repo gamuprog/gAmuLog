@@ -48,7 +48,7 @@ export const CheckBoxTag = ({
   return (
     <div className={`${className} inline`}>
       <label
-        className={`rounded-full cursor-pointer pr-2 ${tagStyleVariants[tag]} ${
+        className={`rounded-full px-2 cursor-pointer ${tagStyleVariants[tag]} ${
           isChecked && checkedTagStyleVariants[tag]
         }`}
       >
@@ -57,7 +57,7 @@ export const CheckBoxTag = ({
           checked={isChecked}
           defaultChecked={defaultChecked}
           onChange={() => onClick(tag)}
-          className="mr-2 appearance-none"
+          className="hidden"
         />
         {tagToStringForViewer(tag)}
       </label>
