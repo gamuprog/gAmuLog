@@ -39,7 +39,7 @@ export const CheckBoxCategory = ({
         checked={isChecked}
         defaultChecked={defaultChecked}
         onChange={() => onClick(category)}
-        className="mr-2 appearance-none"
+        className="hidden"
       />
       <div className="flex flex-col items-center p-3 md:p-2">
         <div className="text-2xl">{categories[category].ja}</div>
