@@ -38,14 +38,14 @@ export default async function Post({ params }: Params) {
   return (
     <main>
       <PostPageHeader />
-      <article className="my-32 px-16 znc">
+      <article className="my-20 md:my-32 md:px-16 znc">
         <Script
           src="https://embed.zenn.studio/js/listen-embed-event.js"
           strategy="afterInteractive"
         />
 
         <PostTitle>{post.title}</PostTitle>
-        <div className="flex mx-16 justify-between">
+        <div className="mx-4 flex justify-between md:mx-16">
           <PostBody
             title={post.title}
             date={post.date}
@@ -54,6 +54,7 @@ export default async function Post({ params }: Params) {
             content={content}
           />
           <Sidebar
+            className="hidden md:block"
             relatedPosts={relatedPosts}
             recommendedPosts={recommendedPosts}
           />

@@ -21,7 +21,7 @@ type Props = {
 };
 
 export function PostPreview({
-  className = "",
+  className,
   themeColorVariant,
   title,
   coverImage,

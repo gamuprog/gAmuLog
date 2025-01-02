@@ -2,6 +2,7 @@ import React from "react";
 
 import { ViewMoreButton } from "@/components/button/ViewMoreButton";
 import { PostPreview } from "@/components/postPreview/PostPreview";
+import { PostPreviewHorizontal } from "@/components/postPreview/PostPreviewHorizontal";
 import { Post } from "@/interfaces/post";
 
 export type ThemeColorVariant = "red" | "blue" | "green" | "orange";
@@ -34,8 +35,8 @@ export function HomeSection({
   };
 
   return (
-    <section className={`pt-16 mx-auto px-36 ${className}`}>
-      <h2 className="text-center text-xl md:text-4xl tracking-tight leading-tight">
+    <section className={`pt-16 mx-auto px-8 md:px-36 ${className}`}>
+      <h2 className="text-center text-2xl md:text-4xl tracking-tight leading-tight">
         {sectionTitleJa}
       </h2>
       <div className={`text-center mb-8 ${textVariants[themeColorVariant]}`}>
@@ -43,16 +44,29 @@ export function HomeSection({
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-20 md:gap-y-32">
         {posts.slice(0, maxPostsToShow).map((post) => (
-          <PostPreview
-            themeColorVariant={themeColorVariant}
-            key={post.slug}
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            tags={post.tags}
-            slug={post.slug}
-            excerpt={post.excerpt}
-          />
+          <>
+            <PostPreview
+              className="hidden md:block"
+              themeColorVariant={themeColorVariant}
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              tags={post.tags}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+            <PostPreviewHorizontal
+              className="rounded-md md:hidden"
+              key={post.slug}
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              tags={post.tags}
+              slug={post.slug}
+              excerpt={post.excerpt}
+            />
+          </>
         ))}
       </div>
       {viewMoreTo ? (

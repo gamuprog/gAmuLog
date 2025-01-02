@@ -7,9 +7,9 @@ import { externalURL } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-950 text-white py-16">
-      <div className="pb-8 flex flex-col items-center">
-        <h3 className="text-4xl font-bold tracking-tight leading-tight">
+    <footer className="bg-gray-950 text-white pt-4 pb-6 md:py-16">
+      <div className="pb-2 md:pb-8 flex flex-col items-center">
+        <h3 className="text-2xl md:text-4xl font-bold tracking-tight leading-tight">
           gAmuLog.
         </h3>
         <div className="mr-2 text-sm">がむログ</div>
@@ -17,23 +17,23 @@ export function Footer() {
       <div className="flex justify-center">
         <FooterItems />
       </div>
-      <div className="mt-8 mx-[36rem] flex justify-between">
+      <div className="mx-20 mt-8 md:mx-[36rem] flex justify-between">
         <Link href={externalURL.zenn} target="_blank" rel="noopener noreferrer">
-          <SiZenn className="text-6xl" />
+          <SiZenn className="text-4xl md:text-6xl" />
         </Link>
         <Link
           href={externalURL.twitter}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaXTwitter className="text-6xl" />
+          <FaXTwitter className="text-4xl md:text-6xl" />
         </Link>
         <Link
           href={externalURL.github}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub className="text-6xl" />
+          <FaGithub className="text-4xl md:text-6xl" />
         </Link>
       </div>
     </footer>
