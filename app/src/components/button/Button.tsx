@@ -16,7 +16,7 @@ export function Button({
   return (
     <button
       onClick={onClick}
-      className={`border-2 rounded-md py-2 px-4 ${className}`}
+      className={`px-2 rounded-full border md:rounded-md md:py-2 md:px-4 ${className}`}
       disabled={disabled}
     >
       {children}

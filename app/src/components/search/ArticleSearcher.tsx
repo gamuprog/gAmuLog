@@ -6,6 +6,7 @@ import { BsSliders } from "react-icons/bs";
 import { Button } from "@/components/button/Button";
 import { ThemeColorVariant } from "@/components/home/HomeSection";
 import { PostPreview } from "@/components/postPreview/PostPreview";
+import { PostPreviewHorizontal } from "@/components/postPreview/PostPreviewHorizontal";
 import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
 import { CheckBoxTag } from "@/components/search/CheckBoxTag";
 import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
@@ -141,7 +142,7 @@ export default function ArticleSearcher({ posts }: Props) {
           }
           searchQueryCategory={searchQueryCategory}
         >
-          <div className="flex justify-between px-4">
+          <div className="hidden md:flex justify-between px-4">
             {categories.map((category) => (
               <CheckBoxCategory
                 key={category}
@@ -152,16 +153,27 @@ export default function ArticleSearcher({ posts }: Props) {
               />
             ))}
           </div>
+          <div className="flex flex-col px-4 mt-4 md:hidden">
+            {categories.map((category) => (
+              <CheckBoxCategory
+                key={category}
+                category={category}
+                isChecked={searchQueryCategory?.includes(category) ?? false}
+                onClick={handleClickCategory}
+                className="mb-6 w-full"
+              />
+            ))}
+          </div>
         </DetailSearchModalFrame>
       )}
-      <div className="mt-36 px-40">
-        <div className="text-center text-3xl tracking-widest font-medium">
+      <div className="mt-24 px-8 md:mt-36 md:px-40">
+        <div className="text-center text-2xl md:text-3xl tracking-widest font-medium">
           記事を検索する
         </div>
-        <div className="text-center text-gray-400 tracking-widest mt-2">
+        <div className="text-center text-gray-400 tracking-widest md:mt-2">
           SEARCH
         </div>
-        <div className="relative flex my-10 mx-40">
+        <div className="my-6 relative flex md:my-10 md:mx-40">
           <button type="button" onClick={handleClickDetailButton}>
             <BsSliders
               className={`absolute top-[9px] text-2xl text-gray-500 cursor-pointer ${
@@ -176,8 +188,8 @@ export default function ArticleSearcher({ posts }: Props) {
             onChange={handleChangeQueryText}
           />
         </div>
-        <div className="ml-10 mb-4 flex">
-          <div className="w-36 min-w-36 flex flex-col">
+        <div className="md:ml-10 mb-4 flex">
+          <div className="hidden md:flex w-36 min-w-36 flex-col">
             <span>タグで絞り込む:</span>
             <Button
               onClick={handleClickDeleteAllTagButton}
@@ -194,27 +206,51 @@ export default function ArticleSearcher({ posts }: Props) {
           <div className="flex flex-wrap">
             {tags.map((tag) => (
               <CheckBoxTag
-                className="mx-10 mb-4"
+                className="mx-2 mb-2 md:mx-10 md:mb-4"
                 key={tag}
                 tag={tag}
                 isChecked={searchQueryTags?.includes(tag) ?? false}
                 onClick={handleClickTag}
               />
             ))}
+            <Button
+              onClick={handleClickDeleteAllTagButton}
+              className={`mb-2 text-sm md:hidden ${
+                searchQueryTags == null || searchQueryTags.length == 0
+                  ? "border-gray-400 text-gray-400"
+                  : "border-black"
+              }`}
+              disabled={searchQueryTags == null || searchQueryTags.length == 0}
+            >
+              タグを全解除
+            </Button>
           </div>
         </div>
-        <div className="my-10 grid grid-cols-3 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
+        <div className="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
           {searchResultsByQueryCategory.map((post) => (
-            <PostPreview
-              themeColorVariant={textVariants[post.category]}
-              key={post.slug}
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              tags={post.tags}
-              slug={post.slug}
-              excerpt={post.excerpt}
-            />
+            <>
+              <PostPreview
+                className="hidden md:block"
+                themeColorVariant={textVariants[post.category]}
+                key={post.slug}
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+                tags={post.tags}
+                slug={post.slug}
+                excerpt={post.excerpt}
+              />
+              <PostPreviewHorizontal
+                className="rounded-md md:hidden"
+                key={post.slug}
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+                tags={post.tags}
+                slug={post.slug}
+                excerpt={post.excerpt}
+              />
+            </>
           ))}
         </div>
       </div>

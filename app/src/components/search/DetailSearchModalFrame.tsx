@@ -23,7 +23,7 @@ export function DetailSearchModalFrame({
   useClickOutside(divRef, handleClickClose);
 
   return (
-    <div className="fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-60 px-96 py-48 transition-opacity duration-500 ease-in-out">
+    <div className="px-8 py-16 fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-60 transition-opacity duration-500 ease-in-out md:px-96 md:py-48">
       <div
         className="relative bg-white w-full h-full rounded-md p-4"
         ref={divRef}
@@ -31,7 +31,7 @@ export function DetailSearchModalFrame({
         <div className="flex justify-between items-center p-3">
           <h3 className="mr-10 break-keep font-bold text-xl">詳細検索</h3>
           <button
-            className="min-w-fit text-5xl text-gray-600"
+            className="min-w-fit text-3xl md:text-5xl text-gray-600"
             type="button"
             onClick={handleClickClose}
           >

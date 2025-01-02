@@ -29,24 +29,22 @@ export const CheckBoxCategory = ({
   };
 
   return (
-    <div className={`${className}`}>
-      <label
-        className={`rounded-lg cursor-pointer inline-flex flex-col items-center px-4 ${
-          categoryStyleVariants[category]
-        } ${isChecked && checkedCategoryStyleVariants[category]}`}
-      >
-        <input
-          type="checkbox"
-          checked={isChecked}
-          defaultChecked={defaultChecked}
-          onChange={() => onClick(category)}
-          className="mr-2 appearance-none"
-        />
-        <div className="flex flex-col items-center p-2">
-          <div className="text-2xl">{categories[category].ja}</div>
-          <div className="text-sm">{categories[category].en}</div>
-        </div>
-      </label>
-    </div>
+    <label
+      className={`${className} rounded-lg cursor-pointer inline-flex flex-col items-center px-4 ${
+        categoryStyleVariants[category]
+      } ${isChecked && checkedCategoryStyleVariants[category]}`}
+    >
+      <input
+        type="checkbox"
+        checked={isChecked}
+        defaultChecked={defaultChecked}
+        onChange={() => onClick(category)}
+        className="mr-2 appearance-none"
+      />
+      <div className="flex flex-col items-center p-3 md:p-2">
+        <div className="text-2xl">{categories[category].ja}</div>
+        <div className="text-sm">{categories[category].en}</div>
+      </div>
+    </label>
   );
 };
