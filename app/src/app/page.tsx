@@ -9,17 +9,29 @@ export default function Index() {
     <main>
       <HomeHeader />
       <div
-        className="bg-fixed flex flex-col justify-center items-center text-white"
+        className="hidden bg-fixed flex-col justify-center items-center text-white md:flex "
         style={{
           backgroundImage: "url('/assets/home/home_min.webp')",
-          width: "100vw",
+          width: "100%",
           height: "95vh",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="text-5xl font-semibold">がむログ</div>
+        <div className="font-semibold text-5xl ">がむログ</div>
         <div className="mt-2 ml-4">技術記事と、開発日記と、趣味置き場。</div>
+      </div>
+      <div
+        className="bg-fixed flex flex-col justify-center items-center text-white md:hidden"
+        style={{
+          backgroundImage: "url('/assets/home/home_min.webp')",
+          width: "100%",
+          aspectRatio: "3 / 2",
+          backgroundSize: "contain",
+        }}
+      >
+        <div className="text-xl font-semibold ">がむログ</div>
+        <div className="mt-6 ml-4">技術記事と、開発日記と、趣味置き場。</div>
       </div>
       <HomeSection
         themeColorVariant="red"

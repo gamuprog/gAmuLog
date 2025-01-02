@@ -1,19 +1,21 @@
-import { PostPreviewForSidebar } from "@/components/postPreview/PostPreviewForSidebar";
+import { PostPreviewHorizontal } from "@/components/postPreview/PostPreviewHorizontal";
 import { Post } from "@/interfaces/post";
 
 type Props = {
+  className?: string;
   relatedPosts: Post[];
   recommendedPosts: Post[];
   maxPostsToShow?: number;
 };
 
 export function Sidebar({
+  className,
   relatedPosts,
   recommendedPosts,
   maxPostsToShow = 3,
 }: Props) {
   return (
-    <div className="max-w-sm min-w-[16rem]">
+    <div className={`${className} max-w-sm min-w-[16rem]`}>
       <section>
         <div className="text-2xl border-t-2 border-b-2 border-black p-4">
           関連記事
@@ -21,7 +23,7 @@ export function Sidebar({
         {relatedPosts.slice(0, maxPostsToShow).map((post, index) => (
           <>
             {index !== 0 && <div className="border-t border-gray-200" />}
-            <PostPreviewForSidebar
+            <PostPreviewHorizontal
               key={post.slug}
               title={post.title}
               coverImage={post.coverImage}
@@ -40,7 +42,7 @@ export function Sidebar({
         {recommendedPosts.map((post, index) => (
           <>
             {index !== 0 && <div className="border-t border-gray-200" />}
-            <PostPreviewForSidebar
+            <PostPreviewHorizontal
               key={post.slug}
               title={post.title}
               coverImage={post.coverImage}

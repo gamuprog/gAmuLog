@@ -5,6 +5,7 @@ import { ColoredTagCC } from "@/components/tag/ColoredTagCC";
 import { Tag } from "@/interfaces/tag";
 
 type Props = {
+  className?: string;
   title: string;
   coverImage: string;
   date: string;
@@ -13,7 +14,8 @@ type Props = {
   slug: string;
 };
 
-export function PostPreviewForSidebar({
+export function PostPreviewHorizontal({
+  className,
   title,
   coverImage,
   date,
@@ -24,7 +26,7 @@ export function PostPreviewForSidebar({
     <Link
       as={`/posts/${slug}`}
       href="/posts/[slug]"
-      className="!no-underline !text-black hover:bg-slate-100 hover:shadow-sm transition-shadow duration-200 ease-in-out"
+      className={`${className} !no-underline !text-black hover:bg-slate-100 hover:shadow-sm transition-shadow duration-200 ease-in-out`}
     >
       <div className="flex items-center py-4">
         <div className="flex items-center justify-center overflow-hidden w-1/3 max-h-20">

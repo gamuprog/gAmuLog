@@ -14,7 +14,7 @@ type Props = {
 
 export function PostBody({ content, title, coverImage, date, tags }: Props) {
   return (
-    <div className="max-w-3xl mr-10">
+    <div className="max-w-3xl md:mr-10">
       <div className="flex flex-wrap gap-4">
         {tags.map((tag) => (
           <ColoredTagSC tag={tag} key={tag} />
