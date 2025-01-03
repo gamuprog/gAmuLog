@@ -1,5 +1,6 @@
 import { Zen_Kaku_Gothic_Antique } from "next/font/google";
 
+import { GoogleAdScript } from "@/components/ads/GoogleAdsScript";
 import { Footer } from "@/components/footer/Footer";
 import { metadataBase } from "@/lib/constants";
 
@@ -7,6 +8,7 @@ import type { Metadata } from "next";
 
 import "highlight.js/styles/hybrid.css";
 import "@/app/globals.css";
+
 const inter = Zen_Kaku_Gothic_Antique({
   weight: ["300", "400", "500"],
   subsets: ["latin"],
@@ -77,6 +79,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <GoogleAdScript />
       </body>
     </html>
   );

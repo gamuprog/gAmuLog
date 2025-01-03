@@ -1,3 +1,4 @@
+import GoogleAdsComponent from "@/components/ads/GoogleAdsComponent";
 import { PostPreviewHorizontal } from "@/components/postPreview/PostPreviewHorizontal";
 import { Post } from "@/interfaces/post";
 
@@ -54,6 +55,7 @@ export function Sidebar({
           </>
         ))}
       </section>
+      <GoogleAdsComponent slot="3265690143" />
     </div>
   );
 }
