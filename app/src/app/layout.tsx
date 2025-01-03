@@ -64,6 +64,7 @@ export default function RootLayout({
         />
         <link rel="shortcut icon" href="/favicon/favicon.ico?v=1" />
         <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="google-adsense-account" content="ca-pub-4360537932383383" />
         <meta
           name="msapplication-config"
           content="/favicon/browserconfig.xml"
