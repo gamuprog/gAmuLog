@@ -1,3 +1,4 @@
+import GoogleAdsComponent from "@/components/ads/GoogleAdsComponent";
 import { HomeHeader } from "@/components/home/HomeHeader";
 import { HomeSection } from "@/components/home/HomeSection";
 import { getAllPosts } from "@/lib/api";
@@ -41,6 +42,8 @@ export default function Index() {
         viewMoreTo="/search"
         viewMoreText="全ての記事を見る"
       />
+      <GoogleAdsComponent slot="3265690143" />
+
       <HomeSection
         themeColorVariant="blue"
         posts={allPosts.filter((post) => post.category === "Tech")}
