@@ -6,7 +6,7 @@ type Props = {
 
 export function PostTitle({ children }: Props) {
   return (
-    <h1 className="text-xl md:text-3xl lg:text-4xl md:font-semibold tracking-tight leading-tight md:leading-none mb-12 text-center md:text-left">
+    <h1 className="!text-xl md:!text-3xl md:font-semibold tracking-tight leading-tight md:leading-none mb-12 text-center md:text-left">
       {children}
     </h1>
   );
