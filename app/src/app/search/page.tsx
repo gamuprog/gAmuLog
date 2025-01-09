@@ -6,7 +6,6 @@ import { getAllPosts } from "@/lib/api";
 
 export default function Index() {
   const allPosts = getAllPosts();
-
   return (
     <main>
       <PostPageHeader />

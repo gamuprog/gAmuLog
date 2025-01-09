@@ -156,7 +156,7 @@ export default function ArticleSearcher({ posts }: Props) {
           <div className="flex flex-col px-4 mt-4 md:hidden">
             {categories.map((category) => (
               <CheckBoxCategory
-                key={category}
+                key={category + "mobile"}
                 category={category}
                 isChecked={searchQueryCategory?.includes(category) ?? false}
                 onClick={handleClickCategory}
@@ -228,11 +228,10 @@ export default function ArticleSearcher({ posts }: Props) {
         </div>
         <div className="my-10 grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-4">
           {searchResultsByQueryCategory.map((post) => (
-            <>
+            <div key={post.slug}>
               <PostPreview
                 className="hidden md:block"
                 themeColorVariant={textVariants[post.category]}
-                key={post.slug}
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
@@ -242,7 +241,6 @@ export default function ArticleSearcher({ posts }: Props) {
               />
               <PostPreviewHorizontal
                 className="rounded-md md:hidden"
-                key={post.slug}
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
@@ -250,7 +248,7 @@ export default function ArticleSearcher({ posts }: Props) {
                 slug={post.slug}
                 excerpt={post.excerpt}
               />
-            </>
+            </div>
           ))}
         </div>
       </div>
