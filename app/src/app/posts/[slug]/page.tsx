@@ -10,6 +10,7 @@ import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 
 import "zenn-content-css";
+import { ShareButtons } from "@/components/button/ShareButtons";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -45,7 +46,10 @@ export default async function Post({ params }: Params) {
         />
 
         <PostTitle>{post.title}</PostTitle>
-        <div className="mx-4 flex justify-between md:mx-16">
+
+        <div className="mx-4 flex justify-between md:mr-16 md:ml-0">
+          <ShareButtons post={post} className="sticky top-4 left-0" />
+
           <PostBody
             title={post.title}
             date={post.date}

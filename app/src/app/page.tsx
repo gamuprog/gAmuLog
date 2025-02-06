@@ -1,3 +1,4 @@
+import { ShareButtons } from "@/components/button/ShareButtons";
 import { HomeHeader } from "@/components/home/HomeHeader";
 import { HomeSection } from "@/components/home/HomeSection";
 import { getAllPosts } from "@/lib/api";
@@ -49,6 +50,8 @@ export default function Index() {
         className="bg-gray-100"
         viewMoreTo="/tech"
       />
+      <ShareButtons post={allPosts[0]} className="sticky top-4 left-0" />
+
       <HomeSection
         themeColorVariant="green"
         posts={allPosts.filter((post) => post.category === "DevDiary")}
