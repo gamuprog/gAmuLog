@@ -69,7 +69,7 @@ vercel で特に設定せずにデプロイを行うと、URL が`https://{proje
 
 ---
 
-2. Recommended されている一番上のものを選ぶ(`www`あり・なしを両方登録し、`www`ありは`www`なしにリダイレクトする)
+2. Recommended されている一番上のものを選ぶ(`www`あり・なしを両方登録し、`www`なしは`www`ありにリダイレクトする)
    ![](https://storage.googleapis.com/zenn-user-upload/c36141dd3ef5-20241221.png)
 
 ---
