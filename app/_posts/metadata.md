@@ -165,13 +165,13 @@ Next.js ではすべてのページに自動的に
 
 #### トップページ(静的生成)
 
-![](https://storage.googleapis.com/zenn-user-upload/2c4ae4ebff53-20241209.png)
+![](/assets/blog/metadata/image1.png)
 
 `<title>`タグや、`<meta description>`、`<meta og>`が正しく設定されていることが確認できた。また、`<meta charset="utf-8">`,`<meta name="viewport" content="width=device-width, initial-scale=1">`も自動的に生成されている。
 
 #### 記事内容ページ(動的生成)
 
-![](https://storage.googleapis.com/zenn-user-upload/9cdc10cd7f3c-20241209.png)
+![](/assets/blog/metadata/image2.png)
 
 `<title>`タグや、`<meta description>`、`<meta og>`が特定の記事の内容と一致しており、動的に設定されていることが確認できた。`<meta charset="utf-8">`,`<meta name="viewport" content="width=device-width, initial-scale=1">`も自動的に生成されている。
 
