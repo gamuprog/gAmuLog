@@ -39,7 +39,7 @@ Google 側でインデックス登録というものが行われると、検索�
 
 [Google Search Console](https://search.google.com/search-console/about?hl=ja)というサイトを用いて、ユーザーのサイトを訪問回数や、検索パフォーマンスを確認することができる。公開してある程度の時間が経ってもインデックス登録が行われていないことで異変を感じた。
 
-![](https://storage.googleapis.com/zenn-user-upload/409ef8042246-20250208.png)
+![](/assets/blog/duplicate_content_SEO/image1.png)
 上記の画面で、どのページがインデックス登録されているか確認できるが、総記事数の 1/4 程度の記事しかインデックスされていなかった 🫥
 
 サイトマップを作成して送信したり、個別にインデックス登録リクエストを送ったりしたが修正されることがなかったので、まず重複コンテンツを修正する必要がありそう(ただ、ここでは重複コンテンツが原因とは明記されていないのでもしかしたら別の理由の可能性もある)。
@@ -53,12 +53,13 @@ Google 側でインデックス登録というものが行われると、検索�
 広告実装の過程で必要な Google Adsense の審査に落ちた。
 そしてこんなメールが届いた。
 
-![](https://storage.googleapis.com/zenn-user-upload/1c66bd5ac398-20250208.png)
+![](/assets/blog/duplicate_content_SEO/image2.png)
+
 そこには**審査落ちのメールとは思えないくらい笑顔なおじさん**が表示されていた。
 
-ちなみに、Google Adsense のサイトを訪問してみると、
+ちなみに、Google AdSense のサイトを訪問してみると、
 
-![](https://storage.googleapis.com/zenn-user-upload/cd0900e6bb24-20250208.png)
+![](/assets/blog/duplicate_content_SEO/image3.png)
 
 とうとう**重複コンテンツが問題である**と明言された。これは修正せねば。
 
