@@ -1,10 +1,10 @@
 ---
 title: "2025年最新版｜主要な生成AIツールまとめ - チャットから開発・画像・動画まで"
-excerpt: "ChatGPTやGeminiなどの自然言語AIからDevinやGitHub Copilotといった開発AI、さらに画像生成や動画生成AIもまとめて紹介。用途や特徴をざっくり押さえて、最新AIの活用ヒントを得よう💭"
+excerpt: "ChatGPTやGeminiなどの自然言語AIからDevinやGitHub Copilotといった開発AI、画像生成や動画生成AIやNotebookLMもまとめて紹介。用途や特徴をざっくり押さえて、最新AIの活用ヒントを得よう💭"
 coverImage: "/assets/blog/react-union-literal/react-css_cover.webp"
-date: "2025-02-18T05:35:07.322Z"
+date: "2025-02-19T05:35:07.322Z"
 category: "Tech"
-tags: ["AI", "Programming"]
+tags: ["AI", "Programming", "Tools"]
 author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
@@ -94,6 +94,14 @@ Copilot Chat の登場により、エディタ内で自然言語を用いたコ�
 
 https://zenn.dev/umi_mori/books/ai-native-programming/viewer/github_copilot_basic_usage
 
+### Dify
+
+Phrase 社が開発する「Web ベースの生成 AI 統合プラットフォーム」。OpenAI などの LLM を活用した AI アプリケーションを、GUI で管理しながら素早くデプロイできるのが特徴。  
+自社環境へのデプロイ(OSS 版)にも対応しており、機密性の高いプロジェクトでの利用も検討しやすい。  
+ナレッジベースやデータソースと連携し、各種ワークフローを自動化できるため、**AI チャットボットをノーコードで作成**することなどができる。
+
+https://zenn.dev/aldagram_tech/articles/7c168a667b06e4
+
 ### v0
 
 Vercel 社製。自然言語から UI デザインとコード生成ができる。成果物をそのまま公開することも可能。
@@ -180,6 +188,16 @@ Pollo AI,Pika など
 
 ⬇️ 動画生成 AI をもっと知りたい人用
 https://www.fruitmail.net/articles/generation-ai-videos
+
+## 番外編: NoteBookLM
+
+DeNA の南場会長が 2025/2/5 の講演で自身が利用していると言っていた NotebookLM。
+Google 社製で、**ドキュメント管理 ×AI** というようなサービス。
+ドキュメントを投げるだけで要約してくれたり、そのドキュメントをもとにこちらの質問に答えてくれる。キャッチアップにめちゃめちゃ便利かも。
+
+さらに、特定の分野のドキュメントを投げまくることでその分野について深い知見を持った AI を作ることができるのも特徴 👀
+
+ただ、要約・検索に特化した AI ツールなので、「読み込ませた記事を元に新しい記事を生成する」みたいなことはできないっぽい 🙅
 
 ## おわりに
 
