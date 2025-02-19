@@ -31,17 +31,17 @@ GitHub Actions の変更などは行なったことがあったが、初回デ�
 ---
 
 2. Add New... → Project を選択
-   ![](https://storage.googleapis.com/zenn-user-upload/86e842bb853f-20241221.webp)
+   ![](/assets/blog/deploy/image1.webp)
 
 ---
 
 3. Import Git Repository から、import したいプロジェクトを選択
-   ![](https://storage.googleapis.com/zenn-user-upload/2bd46d4a643e-20241221.webp)
+   ![](/assets/blog/deploy/image2.webp)
 
 ---
 
 4. Project Name を設定、フレームワークを「Next.js」にし、デプロイ！
-   ![](https://storage.googleapis.com/zenn-user-upload/86b277f6ea23-20241221.png)
+   ![](/assets/blog/deploy/image3.png)
 
 ---
 
@@ -65,30 +65,30 @@ vercel で特に設定せずにデプロイを行うと、URL が`https://{proje
    デプロイしているプロジェクト →Settings→Domains に移動して、検索ボックス内に自分が追加したいドメインを入力して、「Add」を押下
 
 ↓ この検索ボックス内にドメインを入力(画像は独自ドメイン設定後のものなので本来は`www.gamulog.com`と`gamulog.com`は下にない)
-![](https://storage.googleapis.com/zenn-user-upload/b631c4e57757-20241221.png)
+![](/assets/blog/deploy/image4.png)
 
 ---
 
 2. Recommended されている一番上のものを選ぶ(`www`あり・なしを両方登録し、`www`なしは`www`ありにリダイレクトする)
-   ![](https://storage.googleapis.com/zenn-user-upload/c36141dd3ef5-20241221.png)
+   ![](/assets/blog/deploy/image5.png)
 
 ---
 
 3. `Aレコード`と`CNAME`の`Value`をメモする
    お名前.com で DNS 設定する際に使う。
-   ![](https://storage.googleapis.com/zenn-user-upload/ea0b90314d34-20241221.webp)
+   ![](/assets/blog/deploy/image6.webp)
 
 ---
 
 4. 「DNS 設定」から設定したいドメインを選択 → 「DNS レコード設定を利用する」を選択
-   ![](https://storage.googleapis.com/zenn-user-upload/5ddcfe1733e0-20241221.png)
+   ![](/assets/blog/deploy/image7.png)
 
 ---
 
 5. さっきメモったやつ(2 種類)を入力
    TTL は 3600 のままで OK。
    `Aレコード`の場合はホスト名は空、`CNAME`の場合は`www`
-   ![](https://storage.googleapis.com/zenn-user-upload/f741e198d24b-20241221.png)
+   ![](/assets/blog/deploy/image8.png)
 
 ---
 
@@ -101,7 +101,7 @@ https://ph-1ab.com/deploy-vercel-with-own-domain/
 ### 余談 1.ドメイン自動診断
 
 SSL 証明書発行中に、お名前.com がドメインの自動診断を行っていて、
-![](https://storage.googleapis.com/zenn-user-upload/d68749e34fef-20241221.png)
+![](/assets/blog/deploy/image9.PNG)
 
 これが表示されたのでちょっと焦った。**HTTPS 接続になった後は評価が B まで上がった**のでひとまず安心。A 評価にするにはおそらく追加で課金して色々なセキュリティオプションをつける必要がありそう。
 
