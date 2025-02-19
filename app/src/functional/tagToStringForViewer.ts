@@ -22,6 +22,8 @@ export function tagToStringForViewer(tag: Tag): string {
       return "AI";
     case "CS":
       return "CS";
+    case "Tools":
+      return "ツール";
     case "Other":
       return "その他";
   }

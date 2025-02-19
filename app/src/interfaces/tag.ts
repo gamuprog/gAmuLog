@@ -9,4 +9,5 @@ export type Tag =
   | "Infrastructure"
   | "AI"
   | "CS"
+  | "Tools"
   | "Other";

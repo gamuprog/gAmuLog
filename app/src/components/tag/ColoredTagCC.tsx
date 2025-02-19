@@ -117,6 +117,16 @@ export const ColoredTagCC = ({ tag }: Props) => {
           CS
         </span>
       );
+    case "Tools":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-red-800 hover:-m-[1px] text-sm bg-red-200 text-red-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          ツール
+        </span>
+      );
     case "Other":
       return (
         <span
