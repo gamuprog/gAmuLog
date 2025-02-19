@@ -1,7 +1,7 @@
 ---
 title: "2025年最新版｜主要な生成AIツールまとめ - チャットから開発・画像・動画まで"
 excerpt: "ChatGPTやGeminiなどの自然言語AIからDevinやGitHub Copilotといった開発AI、画像生成や動画生成AIやNotebookLMもまとめて紹介。用途や特徴をざっくり押さえて、最新AIの活用ヒントを得よう💭"
-coverImage: "/assets/blog/react-union-literal/react-css_cover.webp"
+coverImage: "/assets/blog/several_AI/several_AI_cover.webp"
 date: "2025-02-19T05:35:07.322Z"
 category: "Tech"
 tags: ["AI", "Programming", "Tools"]
@@ -9,7 +9,7 @@ author:
   name: JJ Kasper
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
-  url: "/assets/blog/react-union-literal/react-css_cover.webp"
+  url: "/assets/blog/several_AI/several_AI_cover.webp"
 ---
 
 ## まえがき
@@ -198,6 +198,8 @@ Google 社製で、**ドキュメント管理 ×AI** というようなサービ
 さらに、特定の分野のドキュメントを投げまくることでその分野について深い知見を持った AI を作ることができるのも特徴 👀
 
 ただ、要約・検索に特化した AI ツールなので、「読み込ませた記事を元に新しい記事を生成する」みたいなことはできないっぽい 🙅
+
+https://note.com/doerstokyo_kb/n/n7edcc6bd70bf#7a710dda-dc65-4a0b-ba18-8d3b28bd3185
 
 ## おわりに
 
