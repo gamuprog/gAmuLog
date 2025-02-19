@@ -128,9 +128,13 @@ https://zenn.dev/tsuruo/scraps/b76f5914f53a4b
 
 ### その他
 
-Cursor: AI アシスタント付きのコードエディタ(VScode のフォーク)。複数のファイルを跨いだ質問ができたり、web 上のドキュメントを読み込ませた上でコードをの修正をしてもらうことができる。
+Cursor: AI アシスタント付きのコードエディタ(VSCode のフォーク)。複数のファイルを跨いだ質問ができたり、web 上のドキュメントを読み込ませた上でコードをの修正をしてもらうことができる。
 
 https://www.gamulog.com/posts/cursor
+
+Cline: VSCode の拡張機能で、API で ChatGPT や Claude と連携することで、コード修正を行ってくれる。
+
+https://qiita.com/noshut/items/0c1de89c766106b204a8
 
 ## 画像生成な AI
 
