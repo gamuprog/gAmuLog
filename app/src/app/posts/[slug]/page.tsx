@@ -27,8 +27,7 @@ export default async function Post({ params }: Params) {
   const recommendedPosts = allPosts.filter(
     (p) =>
       p.slug !== post.slug &&
-      (p.slug === "react-tutorial-useEffect" ||
-        p.slug === "react-tutorial-useMemo")
+      (p.slug === "several_AI" || p.slug === "duplicate_content_SEO")
   );
 
   const content = markdownToHtml(post.content || "", {
