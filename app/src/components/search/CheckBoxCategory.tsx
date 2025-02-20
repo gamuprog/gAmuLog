@@ -1,16 +1,20 @@
 import React from "react";
 
-import { Category, categories } from "@/interfaces/category";
+import {
+  categoriesWithName,
+  Category,
+  CategoryWithName,
+} from "@/interfaces/category";
 
 type Props = {
-  category: Category;
+  categoryWithName: CategoryWithName;
   onClick: (tag: Category) => void;
   isChecked: boolean;
   defaultChecked?: boolean;
   className?: string;
 };
 export const CheckBoxCategory = ({
-  category,
+  categoryWithName,
   onClick,
   isChecked,
   defaultChecked,
@@ -31,19 +35,21 @@ export const CheckBoxCategory = ({
   return (
     <label
       className={`${className} rounded-lg cursor-pointer inline-flex flex-col items-center px-4 ${
-        categoryStyleVariants[category]
-      } ${isChecked && checkedCategoryStyleVariants[category]}`}
+        categoryStyleVariants[categoryWithName.category]
+      } ${
+        isChecked && checkedCategoryStyleVariants[categoryWithName.category]
+      }`}
     >
       <input
         type="checkbox"
         checked={isChecked}
         defaultChecked={defaultChecked}
-        onChange={() => onClick(category)}
+        onChange={() => onClick(categoryWithName.category)}
         className="hidden"
       />
       <div className="flex flex-col items-center p-3 md:p-2">
-        <div className="text-2xl">{categories[category].ja}</div>
-        <div className="text-sm">{categories[category].en}</div>
+        <div className="text-2xl">{categoryWithName.ja}</div>
+        <div className="text-sm">{categoryWithName.en}</div>
       </div>
     </label>
   );
