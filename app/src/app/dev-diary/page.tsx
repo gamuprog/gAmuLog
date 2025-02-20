@@ -24,33 +24,37 @@ export default function Index() {
           <span className="text-green-400">Dev Diary</span>
         </div>
         <div className="hidden md:block">
-          <div className="flex justify-between">
-            <HeroPostPreview
-              className="w-[55vw] h-[40rem]"
-              themeColorVariant={themeColor}
-              coverImage={devDiaryPosts[0].coverImage}
-              title={devDiaryPosts[0].title}
-              date={devDiaryPosts[0].date}
-              tags={devDiaryPosts[0].tags}
-              excerpt={devDiaryPosts[0].excerpt}
-              slug={devDiaryPosts[0].slug}
-            />
-            <div className="flex flex-col gap-4 w-[30vw]">
-              {devDiaryPosts.slice(1, 3).map((post) => (
-                <PostPreview
-                  key={post.slug}
-                  themeColorVariant={themeColor}
-                  coverImage={post.coverImage}
-                  title={post.title}
-                  date={post.date}
-                  tags={post.tags}
-                  excerpt={post.excerpt}
-                  slug={post.slug}
-                  coverImageSizeVariant="side"
-                />
-              ))}
+          {devDiaryPosts.length > 0 ? (
+            <div className="flex justify-between">
+              <HeroPostPreview
+                className="w-[55vw] h-[40rem]"
+                themeColorVariant={themeColor}
+                coverImage={devDiaryPosts[0].coverImage}
+                title={devDiaryPosts[0].title}
+                date={devDiaryPosts[0].date}
+                tags={devDiaryPosts[0].tags}
+                excerpt={devDiaryPosts[0].excerpt}
+                slug={devDiaryPosts[0].slug}
+              />
+              <div className="flex flex-col gap-4 w-[30vw]">
+                {devDiaryPosts.slice(1, 3).map((post) => (
+                  <PostPreview
+                    key={post.slug}
+                    themeColorVariant={themeColor}
+                    coverImage={post.coverImage}
+                    title={post.title}
+                    date={post.date}
+                    tags={post.tags}
+                    excerpt={post.excerpt}
+                    slug={post.slug}
+                    coverImageSizeVariant="side"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="text-center text-3xl">記事がありません</div>
+          )}
           <div className="border-b my-8" />
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-12">
             {devDiaryPosts.slice(3, 9).map((post) => (
