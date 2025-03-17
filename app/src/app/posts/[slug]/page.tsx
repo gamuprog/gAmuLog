@@ -4,13 +4,13 @@ import Script from "next/script";
 import markdownToHtml from "zenn-markdown-html";
 
 import { Sidebar } from "@/components/Sidebar";
+import { ShareButtons } from "@/components/button/ShareButtons";
 import { PostBody } from "@/components/post/PostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 
 import "zenn-content-css";
-import { ShareButtons } from "@/components/button/ShareButtons";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -32,7 +32,7 @@ export default async function Post({ params }: Params) {
         p.slug === "react-tutorial-useMemo")
   );
 
-  const content = markdownToHtml(post.content || "", {
+  const formattedPostContent = markdownToHtml(post.content || "", {
     embedOrigin: "https://embed.zenn.studio",
   });
 
@@ -48,15 +48,11 @@ export default async function Post({ params }: Params) {
         <PostTitle>{post.title}</PostTitle>
 
         <div className="mx-4 flex justify-between md:mr-16 md:ml-0">
-          <ShareButtons post={post} className="sticky top-4 left-0" />
+          <div className="sticky top-20 h-fit self-start hidden md:block">
+            <ShareButtons post={post} directionVariant="vertical" />
+          </div>
 
-          <PostBody
-            title={post.title}
-            date={post.date}
-            tags={post.tags}
-            coverImage={post.coverImage}
-            content={content}
-          />
+          <PostBody post={post} content={formattedPostContent} />
           <Sidebar
             className="hidden md:block"
             relatedPosts={relatedPosts}
