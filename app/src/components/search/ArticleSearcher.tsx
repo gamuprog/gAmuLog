@@ -11,7 +11,7 @@ import { CheckBoxCategory } from "@/components/search/CheckBoxCategory";
 import { CheckBoxTag } from "@/components/search/CheckBoxTag";
 import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
 import { SearchInput } from "@/components/search/SearchInput";
-import { Category } from "@/interfaces/category";
+import { categoriesWithName, Category } from "@/interfaces/category";
 import { Post } from "@/interfaces/post";
 import { Tag } from "@/interfaces/tag";
 
@@ -43,10 +43,6 @@ export default function ArticleSearcher({ posts }: Props) {
   const [isDetailSearchModalOpen, setIsDetailSearchModalOpen] = useState(false);
 
   const tags = Array.from(new Set(posts.map((post) => post.tags).flat()));
-
-  const categories = Array.from(
-    new Set(posts.map((post) => post.category).flat())
-  );
 
   const handleChangeQueryText = (e: string) => {
     setSearchQueryText(e);
@@ -143,22 +139,28 @@ export default function ArticleSearcher({ posts }: Props) {
           searchQueryCategory={searchQueryCategory}
         >
           <div className="hidden md:flex justify-between px-4">
-            {categories.map((category) => (
+            {categoriesWithName.map((categoryWithName) => (
               <CheckBoxCategory
-                key={category}
-                category={category}
-                isChecked={searchQueryCategory?.includes(category) ?? false}
+                key={categoryWithName.category}
+                categoryWithName={categoryWithName}
+                isChecked={
+                  searchQueryCategory?.includes(categoryWithName.category) ??
+                  false
+                }
                 onClick={handleClickCategory}
                 className="mr-2 mb-2"
               />
             ))}
           </div>
           <div className="flex flex-col px-4 mt-4 md:hidden">
-            {categories.map((category) => (
+            {categoriesWithName.map((categoryWithName) => (
               <CheckBoxCategory
-                key={category + "mobile"}
-                category={category}
-                isChecked={searchQueryCategory?.includes(category) ?? false}
+                key={categoryWithName.category + "mobile"}
+                categoryWithName={categoryWithName}
+                isChecked={
+                  searchQueryCategory?.includes(categoryWithName.category) ??
+                  false
+                }
                 onClick={handleClickCategory}
                 className="mb-6 w-full"
               />

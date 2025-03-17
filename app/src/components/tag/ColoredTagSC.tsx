@@ -89,6 +89,14 @@ export const ColoredTagSC = ({ tag }: Props) => {
           </span>
         </Link>
       );
+    case "Tools":
+      return (
+        <Link href="/search?tag=Tools" className="!no-underline">
+          <span className="hover:border hover:border-red-800 hover:-m-[1px] text-sm bg-red-200 text-red-800 px-2 pb-[2px] rounded-full">
+            ツール
+          </span>
+        </Link>
+      );
     case "Other":
       return (
         <Link href="/search?tag=Other" className="!no-underline">

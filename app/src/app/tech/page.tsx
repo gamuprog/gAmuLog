@@ -24,33 +24,37 @@ export default function Index() {
           <span className="text-blue-400">Tech Articles</span>
         </div>
         <div className="hidden md:block">
-          <div className="flex justify-between">
-            <HeroPostPreview
-              className="w-[55vw] h-[40rem]"
-              themeColorVariant={themeColor}
-              coverImage={techPosts[0].coverImage}
-              title={techPosts[0].title}
-              date={techPosts[0].date}
-              tags={techPosts[0].tags}
-              excerpt={techPosts[0].excerpt}
-              slug={techPosts[0].slug}
-            />
-            <div className="flex flex-col gap-4 w-[30vw]">
-              {techPosts.slice(1, 3).map((post) => (
-                <PostPreview
-                  key={post.slug}
-                  themeColorVariant={themeColor}
-                  coverImage={post.coverImage}
-                  title={post.title}
-                  date={post.date}
-                  tags={post.tags}
-                  excerpt={post.excerpt}
-                  slug={post.slug}
-                  coverImageSizeVariant="side"
-                />
-              ))}
+          {techPosts.length > 0 ? (
+            <div className="flex justify-between">
+              <HeroPostPreview
+                className="w-[55vw] h-[40rem]"
+                themeColorVariant={themeColor}
+                coverImage={techPosts[0].coverImage}
+                title={techPosts[0].title}
+                date={techPosts[0].date}
+                tags={techPosts[0].tags}
+                excerpt={techPosts[0].excerpt}
+                slug={techPosts[0].slug}
+              />
+              <div className="flex flex-col gap-4 w-[30vw]">
+                {techPosts.slice(1, 3).map((post) => (
+                  <PostPreview
+                    key={post.slug}
+                    themeColorVariant={themeColor}
+                    coverImage={post.coverImage}
+                    title={post.title}
+                    date={post.date}
+                    tags={post.tags}
+                    excerpt={post.excerpt}
+                    slug={post.slug}
+                    coverImageSizeVariant="side"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="text-center text-3xl">記事がありません</div>
+          )}
           <div className="border-b my-8" />
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-12">
             {techPosts.slice(3, 9).map((post) => (
