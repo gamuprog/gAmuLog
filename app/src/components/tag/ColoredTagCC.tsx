@@ -127,6 +127,16 @@ export const ColoredTagCC = ({ tag }: Props) => {
           ツール
         </span>
       );
+    case "サウナ":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-red-800 hover:-m-[1px] text-sm bg-red-200 text-red-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          サウナ
+        </span>
+      );
     case "Other":
       return (
         <span

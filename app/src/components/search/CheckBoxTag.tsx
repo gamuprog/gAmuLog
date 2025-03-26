@@ -29,6 +29,7 @@ export const CheckBoxTag = ({
     AI: "bg-indigo-200 text-indigo-800 pb-[2px]",
     CS: "bg-violet-200 text-violet-800 pb-[2px]",
     Tools: "bg-red-200 text-red-800 pb-[2px]",
+    サウナ: "bg-red-200 text-red-800 pb-[2px]",
     Other: "bg-gray-200 text-gray-800 pb-[2px]",
   };
 
@@ -44,6 +45,7 @@ export const CheckBoxTag = ({
     AI: "border-2 border-indigo-800 -m-[2px]",
     CS: "border-2 border-violet-800 -m-[2px]",
     Tools: "border-2 border-red-800 -m-[2px]",
+    サウナ: "border-2 border-red-800 -m-[2px]",
     Other: "border-2 border-gray-800 -m-[2px]",
   };
 
