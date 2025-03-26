@@ -44,7 +44,6 @@ export default function ArticleSearcher({ posts }: Props) {
 
   const tags = Array.from(new Set(posts.map((post) => post.tags).flat()));
 
-  console.log(tags);
   const handleChangeQueryText = (e: string) => {
     setSearchQueryText(e);
   };
@@ -83,7 +82,6 @@ export default function ArticleSearcher({ posts }: Props) {
     });
   };
 
-  console.log(searchQueryTags);
   const searchResults = useMemo(() => {
     if (searchQueryTags === null || searchQueryTags.length === 0) {
       return posts;
