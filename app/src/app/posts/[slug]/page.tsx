@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import markdownToHtml from "zenn-markdown-html";
+// import markdownToHtml from "zenn-markdown-html";
 
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
@@ -9,6 +9,7 @@ import { PostBody } from "@/components/post/PostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
+import markdownToHtml from "@/lib/markdownToHtml";
 
 import "zenn-content-css";
 
@@ -31,9 +32,11 @@ export default async function Post({ params }: Params) {
       (p.slug === "several_AI" || p.slug === "duplicate_content_SEO")
   );
 
-  const formattedPostContent = markdownToHtml(post.content || "", {
-    embedOrigin: "https://embed.zenn.studio",
-  });
+  // const formattedPostContent = markdownToHtml(post.content || "", {
+  //   embedOrigin: "https://embed.zenn.studio",
+  // });
+
+  const formattedPostContent = await markdownToHtml(post.content);
 
   return (
     <main>
