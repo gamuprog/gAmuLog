@@ -43,6 +43,10 @@ export default async function Post({ params }: Params) {
           src="https://embed.zenn.studio/js/listen-embed-event.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://platform.twitter.com/widgets.js"
+          strategy="afterInteractive"
+        />
 
         <PostTitle>{post.title}</PostTitle>
 
