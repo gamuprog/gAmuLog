@@ -44,7 +44,7 @@ export function HomeSection({
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-16 lg:gap-x-12 gap-y-20 md:gap-y-32">
         {posts.slice(0, maxPostsToShow).map((post) => (
-          <>
+          <div key={post.slug}>
             <PostPreview
               className="hidden md:block"
               themeColorVariant={themeColorVariant}
@@ -58,7 +58,7 @@ export function HomeSection({
             />
             <PostPreviewHorizontal
               className="rounded-md md:hidden"
-              key={post.slug}
+              key={post.slug + "-horizontal"}
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
@@ -66,7 +66,7 @@ export function HomeSection({
               slug={post.slug}
               excerpt={post.excerpt}
             />
-          </>
+          </div>
         ))}
       </div>
       {viewMoreTo ? (
