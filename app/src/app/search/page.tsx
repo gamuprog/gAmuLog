@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     canonical: "https://www.gamulog.com/search",
   },
 };
-export default function Index() {
-  const allPosts = getAllPosts();
+export default async function Index() {
+  const allPosts = await getAllPosts();
   return (
     <main>
       <PostPageHeader />

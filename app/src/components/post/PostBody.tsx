@@ -1,3 +1,6 @@
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { MDXRemoteSerializeResult } from "node_modules/next-mdx-remote/dist/types";
+
 import CoverImageForArticle from "@/components/CoverImageForArticle";
 import { ShareButtons } from "@/components/button/ShareButtons";
 import DateFormatter from "@/components/dateFormatter";
@@ -7,10 +10,12 @@ import { Post } from "@/interfaces/post";
 
 type Props = {
   post: Post;
-  content: string;
+  content?: string;
+  mdxSource?: string;
 };
 
-export function PostBody({ post, content }: Props) {
+export function PostBody({ post, content, mdxSource }: Props) {
+  console.log(mdxSource);
   return (
     <div className="max-w-3xl md:mr-10">
       <div className="flex flex-wrap gap-4">
@@ -32,10 +37,13 @@ export function PostBody({ post, content }: Props) {
       <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImageForArticle title={post.title} src={post.coverImage} />
       </div>
-      <div
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      {content && (
+        <div
+          className={markdownStyles["markdown"]}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
+      {mdxSource && <MDXRemote source={mdxSource} />}
     </div>
   );
 }

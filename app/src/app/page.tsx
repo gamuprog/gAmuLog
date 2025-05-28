@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Index() {
-  const allPosts = getAllPosts();
+export default async function Index() {
+  const allPosts = await getAllPosts();
 
   return (
     <main>
