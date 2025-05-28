@@ -40,7 +40,7 @@ export function Sidebar({
           おすすめ記事
         </div>
         {recommendedPosts.map((post, index) => (
-          <>
+          <div key={post.slug}>
             {index !== 0 && <div className="border-t border-gray-200" />}
             <PostPreviewHorizontal
               key={post.slug}
@@ -51,7 +51,7 @@ export function Sidebar({
               slug={post.slug}
               excerpt={post.excerpt}
             />
-          </>
+          </div>
         ))}
       </section>
     </div>
