@@ -41,7 +41,6 @@ export function Sidebar({
         </div>
         {recommendedPosts.map((post, index) => (
           <div key={post.slug}>
-            {/* Add a divider between posts except the first one */}
             {index !== 0 && <div className="border-t border-gray-200" />}
             <PostPreviewHorizontal
               key={post.slug}
