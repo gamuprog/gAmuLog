@@ -21,7 +21,7 @@ export function Sidebar({
           関連記事
         </div>
         {relatedPosts.slice(0, maxPostsToShow).map((post, index) => (
-          <>
+          <div key={post.slug}>
             {index !== 0 && <div className="border-t border-gray-200" />}
             <PostPreviewHorizontal
               key={post.slug}
@@ -32,7 +32,7 @@ export function Sidebar({
               slug={post.slug}
               excerpt={post.excerpt}
             />
-          </>
+          </div>
         ))}
       </section>
       <section className="">
@@ -40,7 +40,8 @@ export function Sidebar({
           おすすめ記事
         </div>
         {recommendedPosts.map((post, index) => (
-          <>
+          <div key={post.slug}>
+            {/* Add a divider between posts except the first one */}
             {index !== 0 && <div className="border-t border-gray-200" />}
             <PostPreviewHorizontal
               key={post.slug}
@@ -51,7 +52,7 @@ export function Sidebar({
               slug={post.slug}
               excerpt={post.excerpt}
             />
-          </>
+          </div>
         ))}
       </section>
     </div>

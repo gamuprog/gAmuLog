@@ -3,6 +3,7 @@ const nextConfig = {
   // *.md / *.mdx もページ拡張子として解釈させる
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   // そのほか既存で入れたい設定があればここに追記
+  transpilePackages: ["next-mdx-remote"],
 };
 
 import createMDX from "@next/mdx";
