@@ -2,7 +2,6 @@ import fs from "fs";
 import { join } from "path";
 
 import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
 import markdownToHtml from "zenn-markdown-html";
 
 import { Post } from "@/interfaces/post";
