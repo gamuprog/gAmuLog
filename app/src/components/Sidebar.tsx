@@ -24,7 +24,6 @@ export function Sidebar({
           <div key={post.slug}>
             {index !== 0 && <div className="border-t border-gray-200" />}
             <PostPreviewHorizontal
-              key={post.slug}
               title={post.title}
               coverImage={post.coverImage}
               date={post.date}
