@@ -6,8 +6,8 @@ import { HeroPostPreview } from "@/components/postPreview/HeroPostPreview";
 import { PostPreview } from "@/components/postPreview/PostPreview";
 import { getAllPosts } from "@/lib/api";
 
-export default function Index() {
-  const allPosts = getAllPosts();
+export default async function Index() {
+  const allPosts = await getAllPosts();
 
   const themeColor = "orange";
 
