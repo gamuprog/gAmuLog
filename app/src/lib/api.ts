@@ -2,9 +2,11 @@ import fs from "fs";
 import { join } from "path";
 
 import matter from "gray-matter";
+import { compileMDX } from "next-mdx-remote/rsc";
 import markdownToHtml from "zenn-markdown-html";
 
 import { Post } from "@/interfaces/post";
+import { MDXButton as SampleButton } from "@/components/button/MDXButton";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -25,13 +27,15 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   const { data, content } = matter(fileContents);
 
   if (isMdx) {
+    const { content } = await compileMdxContent(fileContents);
     // ---- .mdx ----------------------------------------------------------
-    const mdxSource = content; // rehype/remark は必要に応じて
+    // const mdxSource = await serialize(content); // rehype/remark は必要に応じて
+    console.log(data);
     return {
       ...(data as Omit<Post, "kind" | "mdxSource" | "html">),
       slug: realSlug,
       kind: "mdx",
-      mdxSource,
+      mdxSource: content,
     } as Post;
   }
 
@@ -50,4 +54,16 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 export async function getAllPosts(): Promise<Post[]> {
   const posts = await Promise.all(getPostSlugs().map(getPostBySlug));
   return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
+}
+
+export function compileMdxContent(fileContent: string) {
+  return compileMDX({
+    source: fileContent,
+    components: {
+      SampleButton,
+    },
+    options: {
+      parseFrontmatter: true,
+    },
+  });
 }

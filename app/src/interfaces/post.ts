@@ -1,4 +1,5 @@
-import { MDXRemoteSerializeResult } from "node_modules/next-mdx-remote/dist/types";
+import { JSXElementConstructor } from "react";
+import { ReactElement } from "react";
 
 import { Author } from "@/interfaces/author";
 import { Category } from "@/interfaces/category";
@@ -44,7 +45,7 @@ export interface HtmlPost extends BaseFrontMatter {
 export interface MdxPost extends BaseFrontMatter {
   kind: "mdx";
   slug: string;
-  mdxSource: string;
+  mdxSource: ReactElement<any, string | JSXElementConstructor<any>>;
 }
 
 export type Post = HtmlPost | MdxPost;

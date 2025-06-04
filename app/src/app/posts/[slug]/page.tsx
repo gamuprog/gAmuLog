@@ -1,15 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
+import { MDXBody } from "@/components/post/MDXBody";
 import { PostBody } from "@/components/post/PostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
-
 import "zenn-content-css";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -57,7 +56,7 @@ export default async function Post({ params }: Params) {
           {post.kind === "html" ? (
             <PostBody post={post} content={post.html} />
           ) : (
-            <PostBody post={post} mdxSource={post.mdxSource} />
+            <MDXBody post={post} mdxSource={post.mdxSource} />
           )}
 
           {/* サイドバー */}
