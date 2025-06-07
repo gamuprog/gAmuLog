@@ -5,26 +5,25 @@ import markdownToHtml from "zenn-markdown-html";
 
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
-import { PostBody } from "@/components/post/PostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 
 import "zenn-content-css";
+import { MDPostBody } from "@/components/post/MDPostBody";
 
 type Params = { params: Promise<{ slug: string }> };
 
 export default async function Post({ params }: Params) {
   const { slug } = await params;
   const post = await getPostBySlug(slug); // ここを await
-  const allPosts = await getAllPosts();
-
-  const formattedPostContent = markdownToHtml(post.content || "", {
-    embedOrigin: "https://embed.zenn.studio",
-  });
-
   if (!post) return notFound();
 
+  const allPosts = await getAllPosts();
+
+  const formattedPostContent = markdownToHtml((post.content as string) || "", {
+    embedOrigin: "https://embed.zenn.studio",
+  });
   const relatedPosts = allPosts.filter(
     (p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t))
   );
@@ -57,7 +56,7 @@ export default async function Post({ params }: Params) {
             <ShareButtons post={post} directionVariant="vertical" />
           </div>
 
-          <PostBody post={post} content={formattedPostContent} />
+          <MDPostBody post={post} content={formattedPostContent} />
           <Sidebar
             className="hidden md:block"
             relatedPosts={relatedPosts}
@@ -97,5 +96,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
-  return posts.map(({ slug }) => ({ slug }));
+  const mdPosts = posts.filter((post) => post.type === "md");
+  return mdPosts.map(({ slug }) => ({ slug }));
 }
