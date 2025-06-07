@@ -2,7 +2,6 @@ import fs from "fs";
 import { join } from "path";
 
 import matter from "gray-matter";
-import markdownToHtml from "zenn-markdown-html";
 
 import { Post } from "@/interfaces/post";
 
@@ -18,11 +17,6 @@ export function getPostBySlug(slug: string) {
 
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
-
-  // ---- .md -------------------------------------------------------------
-  const html = markdownToHtml(content, {
-    embedOrigin: "https://embed.zenn.studio",
-  });
   return { ...data, slug: realSlug, content } as Post;
 }
 
