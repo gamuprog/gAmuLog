@@ -1,5 +1,5 @@
-import Index from "@/app/posts/(tsx)/test/page";
 import { FrontMatterForTSXPost } from "@/interfaces/frontMatter";
+import { TestPost } from "@/tsxPosts/TestPost";
 
 export const frontMatters: FrontMatterForTSXPost[] = [
   {
@@ -18,7 +18,7 @@ export const frontMatters: FrontMatterForTSXPost[] = [
     ogImage: {
       url: "/assets/blog/deploy/deploy_cover.webp",
     },
-    content: <Index />,
+    content: <TestPost />,
     type: "tsx",
   },
 ];

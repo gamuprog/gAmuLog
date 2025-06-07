@@ -4,7 +4,7 @@ import { join } from "path";
 import matter from "gray-matter";
 
 import { Post } from "@/interfaces/post";
-import { frontMatters } from "@/lib/tsxPost/frontMatter";
+import { frontMatters } from "@/tsxPosts/frontMatter";
 
 const mdPostsDirectory = join(process.cwd(), "_posts");
 const tsxPostsDirectory = join(process.cwd(), "src", "app", "posts");
