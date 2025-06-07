@@ -19,7 +19,7 @@ export default async function Post({ params }: Params) {
   const post = await getPostBySlug(slug); // ここを await
   const allPosts = await getAllPosts();
 
-  const formattedPostContent = markdownToHtml(post.content || "", {
+  const formattedPostContent = markdownToHtml((post.content as string) || "", {
     embedOrigin: "https://embed.zenn.studio",
   });
 
@@ -97,5 +97,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
-  return posts.map(({ slug }) => ({ slug }));
+  const mdPosts = posts.filter((post) => post.type === "md");
+  return mdPosts.map(({ slug }) => ({ slug }));
 }

@@ -1,4 +1,5 @@
 import { MDXRemoteSerializeResult } from "node_modules/next-mdx-remote/dist/types";
+import React from "react";
 
 import { Author } from "@/interfaces/author";
 import { Category } from "@/interfaces/category";
@@ -16,6 +17,7 @@ export type Post = {
   ogImage: {
     url: string;
   };
-  content: string;
+  content: string | React.ReactNode;
   preview?: boolean;
+  type: "md" | "tsx";
 };
