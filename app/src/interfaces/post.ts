@@ -1,5 +1,4 @@
-import { JSXElementConstructor } from "react";
-import { ReactElement } from "react";
+import { JSXElementConstructor, ReactElement } from "react";
 
 import { Author } from "@/interfaces/author";
 import { Category } from "@/interfaces/category";
@@ -45,7 +44,23 @@ export interface HtmlPost extends BaseFrontMatter {
 export interface MdxPost extends BaseFrontMatter {
   kind: "mdx";
   slug: string;
-  mdxSource: ReactElement<any, string | JSXElementConstructor<any>>;
+  mdxSource: string;
 }
 
 export type Post = HtmlPost | MdxPost;
+
+export interface BaseFrontMatterWithSlug {
+  slug: string;
+  title: string;
+  date: string;
+  coverImage: string;
+  category: Category;
+  tags: Tag[];
+  author: Author;
+  excerpt: string;
+  ogImage: {
+    url: string;
+  };
+  content: string;
+  preview?: boolean;
+}

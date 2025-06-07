@@ -12,11 +12,15 @@ import { CheckBoxTag } from "@/components/search/CheckBoxTag";
 import { DetailSearchModalFrame } from "@/components/search/DetailSearchModalFrame";
 import { SearchInput } from "@/components/search/SearchInput";
 import { categoriesWithName, Category } from "@/interfaces/category";
-import { Post } from "@/interfaces/post";
+import {
+  BaseFrontMatter,
+  BaseFrontMatterWithSlug,
+  Post,
+} from "@/interfaces/post";
 import { Tag } from "@/interfaces/tag";
 
 type Props = {
-  posts: Post[];
+  posts: BaseFrontMatterWithSlug[];
 };
 
 export default function ArticleSearcher({ posts }: Props) {

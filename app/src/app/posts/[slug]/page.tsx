@@ -1,24 +1,40 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+import { compileMDX } from "next-mdx-remote/rsc";
 
 import { Sidebar } from "@/components/Sidebar";
+import { SampleButton } from "@/components/button/SampleButton";
 import { ShareButtons } from "@/components/button/ShareButtons";
 import { MDXBody } from "@/components/post/MDXBody";
 import { PostBody } from "@/components/post/PostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostFullBySlug } from "@/lib/api";
 import "zenn-content-css";
 
 type Params = { params: Promise<{ slug: string }> };
 
 export default async function Post({ params }: Params) {
   const { slug } = await params;
-  const post = await getPostBySlug(slug); // ここを await
+  const post = await getPostFullBySlug(slug); // ここを await
   const allPosts = await getAllPosts();
 
   if (!post) return notFound();
+
+  // let body: React.ReactNode;
+
+  // if (post.kind === "html") {
+  //   body = (
+  //     <div className="prose" dangerouslySetInnerHTML={{ __html: post.html }} />
+  //   );
+  // } else {
+  //   body = (
+  //     <div className="prose">
+  //       <MDXBody post={post} source={post.mdxSource} />
+  //     </div>
+  //   );
+  // }
 
   const relatedPosts = allPosts.filter(
     (p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t))
@@ -56,7 +72,7 @@ export default async function Post({ params }: Params) {
           {post.kind === "html" ? (
             <PostBody post={post} content={post.html} />
           ) : (
-            <MDXBody post={post} mdxSource={post.mdxSource} />
+            <MDXBody post={post} source={post.mdxSource} />
           )}
 
           {/* サイドバー */}
@@ -75,7 +91,7 @@ export default async function Post({ params }: Params) {
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = await getPostFullBySlug(slug);
 
   if (!post) return notFound();
 

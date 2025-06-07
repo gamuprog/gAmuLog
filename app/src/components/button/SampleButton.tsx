@@ -4,7 +4,7 @@ type Props = {
   className?: string;
 };
 
-const SampleButton = (className: Props) => {
+export function SampleButton({ className }: Props) {
   return (
     <button
       className={`px-2 rounded-full border md:rounded-md md:py-2 md:px-4 ${className}`}
@@ -12,6 +12,4 @@ const SampleButton = (className: Props) => {
       ボタン
     </button>
   );
-};
-
-export default SampleButton;
+}
