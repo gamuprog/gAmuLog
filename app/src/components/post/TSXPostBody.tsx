@@ -6,10 +6,10 @@ import { Post } from "@/interfaces/post";
 
 type Props = {
   post: Post;
-  content: React.ReactNode;
+  children: React.ReactNode;
 };
 
-export function TSXPostBody({ post, content }: Props) {
+export function TSXPostBody({ post, children }: Props) {
   return (
     <div className="max-w-3xl md:mr-10">
       <div className="flex flex-wrap gap-4">
@@ -28,10 +28,10 @@ export function TSXPostBody({ post, content }: Props) {
           className="md:hidden"
         />
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
+      {/* <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImageForArticle title={post.title} src={post.coverImage} />
-      </div>
-      {content}
+      </div> */}
+      {children}
     </div>
   );
 }

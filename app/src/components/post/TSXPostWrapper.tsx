@@ -12,15 +12,12 @@ import "zenn-content-css";
 
 type Props = {
   frontMatter: FrontMatterForTSXPost;
-  postContent: React.ReactNode;
+  children?: React.ReactNode;
 };
-export default async function TSXPostWrapper({
-  frontMatter,
-  postContent,
-}: Props) {
+export default async function TSXPostWrapper({ frontMatter, children }: Props) {
   const allPosts = await getAllPosts();
 
-  if (!postContent) return notFound();
+  if (!children) return notFound();
 
   const relatedPosts = allPosts.filter(
     (p) =>
@@ -46,7 +43,7 @@ export default async function TSXPostWrapper({
             <ShareButtons post={frontMatter} directionVariant="vertical" />
           </div>
 
-          <TSXPostBody post={frontMatter} content={postContent} />
+          <TSXPostBody post={frontMatter}>{children}</TSXPostBody>
           <Sidebar
             className="hidden md:block"
             relatedPosts={relatedPosts}

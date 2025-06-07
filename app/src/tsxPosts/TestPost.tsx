@@ -5,5 +5,11 @@ type Props = {
 };
 
 export function TestPost({ className }: Props) {
-  return <div>サンプルテストテスト</div>;
+  return (
+    <div>
+      <div>あああ</div>
+      <div className="my-20">サンプルテストテスト</div>
+      <div>aaa</div>
+    </div>
+  );
 }

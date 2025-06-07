@@ -4,7 +4,7 @@ import { TestPost } from "@/tsxPosts/TestPost";
 export const frontMatters: FrontMatterForTSXPost[] = [
   {
     title: "Test Post",
-    slug: "test",
+    slug: "TestPost",
     excerpt:
       "This is a test post to demonstrate the front matter structure in TypeScript.",
     date: "2025-12-21T05:35:07.322Z",

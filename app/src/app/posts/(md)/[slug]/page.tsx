@@ -5,26 +5,25 @@ import markdownToHtml from "zenn-markdown-html";
 
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
-import { MDPostBody } from "@/components/post/MDPostBody";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 
 import "zenn-content-css";
+import { MDPostBody } from "@/components/post/MDPostBody";
 
 type Params = { params: Promise<{ slug: string }> };
 
 export default async function Post({ params }: Params) {
   const { slug } = await params;
   const post = await getPostBySlug(slug); // ここを await
+  if (!post) return notFound();
+
   const allPosts = await getAllPosts();
 
   const formattedPostContent = markdownToHtml((post.content as string) || "", {
     embedOrigin: "https://embed.zenn.studio",
   });
-
-  if (!post) return notFound();
-
   const relatedPosts = allPosts.filter(
     (p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t))
   );
