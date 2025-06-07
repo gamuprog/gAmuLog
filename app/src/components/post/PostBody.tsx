@@ -10,12 +10,10 @@ import { Post } from "@/interfaces/post";
 
 type Props = {
   post: Post;
-  content?: string;
-  mdxSource?: string;
+  content: string;
 };
 
-export function PostBody({ post, content, mdxSource }: Props) {
-  console.log(mdxSource);
+export function PostBody({ post, content }: Props) {
   return (
     <div className="max-w-3xl md:mr-10">
       <div className="flex flex-wrap gap-4">
@@ -37,13 +35,10 @@ export function PostBody({ post, content, mdxSource }: Props) {
       <div className="mb-8 md:mb-16 sm:mx-0">
         <CoverImageForArticle title={post.title} src={post.coverImage} />
       </div>
-      {content && (
-        <div
-          className={markdownStyles["markdown"]}
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-      )}
-      {mdxSource && <MDXRemote source={mdxSource} />}
+      <div
+        className={markdownStyles["markdown"]}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import markdownToHtml from "zenn-markdown-html";
 
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
@@ -18,6 +18,10 @@ export default async function Post({ params }: Params) {
   const { slug } = await params;
   const post = await getPostBySlug(slug); // ここを await
   const allPosts = await getAllPosts();
+
+  const formattedPostContent = markdownToHtml(post.content || "", {
+    embedOrigin: "https://embed.zenn.studio",
+  });
 
   if (!post) return notFound();
 
@@ -53,14 +57,7 @@ export default async function Post({ params }: Params) {
             <ShareButtons post={post} directionVariant="vertical" />
           </div>
 
-          {/* ---- ここで拡張子ごとに描画を変える ---- */}
-          {post.kind === "html" ? (
-            <PostBody post={post} content={post.html} />
-          ) : (
-            <PostBody post={post} mdxSource={post.mdxSource} />
-          )}
-
-          {/* サイドバー */}
+          <PostBody post={post} content={formattedPostContent} />
           <Sidebar
             className="hidden md:block"
             relatedPosts={relatedPosts}
