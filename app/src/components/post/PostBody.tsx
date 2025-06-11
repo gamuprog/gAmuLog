@@ -1,6 +1,3 @@
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { MDXRemoteSerializeResult } from "node_modules/next-mdx-remote/dist/types";
-
 import CoverImageForArticle from "@/components/CoverImageForArticle";
 import { ShareButtons } from "@/components/button/ShareButtons";
 import DateFormatter from "@/components/dateFormatter";

@@ -1,5 +1,3 @@
-import { MDXRemoteSerializeResult } from "node_modules/next-mdx-remote/dist/types";
-
 import { Author } from "@/interfaces/author";
 import { Category } from "@/interfaces/category";
 import { Tag } from "@/interfaces/tag";
