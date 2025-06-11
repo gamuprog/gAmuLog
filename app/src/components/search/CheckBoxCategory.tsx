@@ -1,10 +1,6 @@
 import React from "react";
 
-import {
-  categoriesWithName,
-  Category,
-  CategoryWithName,
-} from "@/interfaces/category";
+import { Category, CategoryWithName } from "@/interfaces/category";
 
 type Props = {
   categoryWithName: CategoryWithName;

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { IoIosSearch } from "react-icons/io";
-import { RxHamburgerMenu } from "react-icons/rx";
 
 type Props = {
   className?: string;
