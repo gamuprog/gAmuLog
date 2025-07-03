@@ -9,7 +9,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export function PostBodyForMd({ post, children }: Props) {
+export function PostBodyForTsx({ post, children }: Props) {
   return (
     <div className="max-w-3xl md:mr-10">
       <div className="flex flex-wrap gap-4">
