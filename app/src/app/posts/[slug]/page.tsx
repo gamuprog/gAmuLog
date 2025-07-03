@@ -5,7 +5,7 @@ import markdownToHtml from "zenn-markdown-html";
 
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
-import { PostBody } from "@/components/post/PostBody";
+import { PostBodyForMd } from "@/components/post/PostBodyForMd";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
@@ -57,7 +57,7 @@ export default async function Post({ params }: Params) {
             <ShareButtons post={post} directionVariant="vertical" />
           </div>
 
-          <PostBody post={post} content={formattedPostContent} />
+          <PostBodyForMd post={post} content={formattedPostContent} />
           <Sidebar
             className="hidden md:block"
             relatedPosts={relatedPosts}
