@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import React from "react";
 
-import TestContent from "@/app/posts/tsxtest/TestContent";
+import TestContent from "@/app/posts/TSX-post/TestContent";
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
 import { PostBodyForTsx } from "@/components/post/PostBodyForTsx";
@@ -11,9 +11,7 @@ import { tsxFrontMatters } from "@/entity/tsxFrontMatters";
 import { getAllPosts } from "@/lib/api";
 
 export default async function Page() {
-  const post = tsxFrontMatters.filter(
-    (post) => post.slug === "sample-tsx-post"
-  )[0];
+  const post = tsxFrontMatters.filter((post) => post.slug === "TSX-post")[0];
 
   if (!post) return notFound();
 
@@ -31,7 +29,6 @@ export default async function Page() {
   return (
     <main>
       <PostPageHeader />
-
       <article className="my-20 md:my-32 md:px-16">
         {/* 埋め込みスクリプト */}
 

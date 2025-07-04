@@ -1,13 +1,13 @@
-import { Post } from "@/interfaces/post";
+import { PostWithEmptyContent } from "@/interfaces/post";
 
-export const tsxFrontMatters: Post[] = [
+export const tsxFrontMatters: PostWithEmptyContent[] = [
   {
-    slug: "sample-tsx-post",
-    title: "Sample TSX Post",
-    date: "2023-10-01",
+    slug: "TSX-post",
+    title: "TSXで記事を書きたい漢の格闘日記",
+    date: "2025-07-04T05:35:07.322Z",
     coverImage: "/images/sample-cover.jpg",
     category: "LifeStyle",
-    tags: ["React", "TypeScript", "Next"],
+    tags: ["React", "Next"],
     author: { name: "がむ", picture: "/assets/blog/authors/jj.jpeg" },
     excerpt: "This is a sample post written in TSX format.",
     ogImage: {

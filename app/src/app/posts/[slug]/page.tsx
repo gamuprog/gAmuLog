@@ -8,7 +8,7 @@ import { ShareButtons } from "@/components/button/ShareButtons";
 import { PostBodyForMd } from "@/components/post/PostBodyForMd";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getPostBySlug, getAllPosts, getAllMdPosts } from "@/lib/api";
 
 import "zenn-content-css";
 
@@ -16,7 +16,8 @@ type Params = { params: Promise<{ slug: string }> };
 
 export default async function Post({ params }: Params) {
   const { slug } = await params;
-  const post = await getPostBySlug(slug); // ここを await
+
+  const post = await getPostBySlug(slug);
   const allPosts = await getAllPosts();
 
   const formattedPostContent = markdownToHtml(post.content || "", {
@@ -31,7 +32,7 @@ export default async function Post({ params }: Params) {
   const recommendedPosts = allPosts.filter(
     (p) =>
       p.slug !== post.slug &&
-      (p.slug === "several_AI" || p.slug === "duplicate_content_SEO")
+      (p.slug === "several_AI.md" || p.slug === "duplicate_content_SEO.md")
   );
 
   return (
@@ -96,6 +97,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const posts = await getAllPosts();
+  const posts = await getAllMdPosts();
   return posts.map(({ slug }) => ({ slug }));
 }
