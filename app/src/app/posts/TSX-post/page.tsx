@@ -12,7 +12,7 @@ import { tsxFrontMatters } from "@/entity/tsxFrontMatters";
 import { getAllPosts } from "@/lib/api";
 
 export default async function Page() {
-  const post = tsxFrontMatters.filter((post) => post.slug === "TSX-post")[0];
+  const post = tsxFrontMatters.find((post) => post.slug === "TSX-post");
 
   if (!post) return notFound();
 
