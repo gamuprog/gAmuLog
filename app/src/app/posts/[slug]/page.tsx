@@ -8,6 +8,7 @@ import { ShareButtons } from "@/components/button/ShareButtons";
 import { PostBodyForMd } from "@/components/post/PostBodyForMd";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
+import { recommendSlugs } from "@/entity/recommendSlugs";
 import { getPostBySlug, getAllPosts, getAllMdPosts } from "@/lib/api";
 
 import "zenn-content-css";
@@ -31,8 +32,7 @@ export default async function Post({ params }: Params) {
   );
   const recommendedPosts = allPosts.filter(
     (p) =>
-      p.slug !== post.slug &&
-      (p.slug === "several_AI.md" || p.slug === "duplicate_content_SEO.md")
+      p.slug !== post.slug && recommendSlugs.some((slug) => slug === p.slug)
   );
 
   return (

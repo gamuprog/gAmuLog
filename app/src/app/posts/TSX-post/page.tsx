@@ -7,6 +7,7 @@ import { ShareButtons } from "@/components/button/ShareButtons";
 import { PostBodyForTsx } from "@/components/post/PostBodyForTsx";
 import { PostPageHeader } from "@/components/post/PostPageHeader";
 import { PostTitle } from "@/components/post/PostTitle";
+import { recommendSlugs } from "@/entity/recommendSlugs";
 import { tsxFrontMatters } from "@/entity/tsxFrontMatters";
 import { getAllPosts } from "@/lib/api";
 
@@ -22,8 +23,7 @@ export default async function Page() {
   );
   const recommendedPosts = allPosts.filter(
     (p) =>
-      p.slug !== post.slug &&
-      (p.slug === "several_AI" || p.slug === "duplicate_content_SEO")
+      p.slug !== post.slug && recommendSlugs.some((slug) => slug === p.slug)
   );
 
   return (
