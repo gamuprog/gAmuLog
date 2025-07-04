@@ -8,6 +8,6 @@ export default function TestContent() {
 
         <p className="text-lg">coming soon...</p>
       </div>
-    </main>
+    </section>
   );
 }
