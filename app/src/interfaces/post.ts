@@ -17,3 +17,5 @@ export type Post = {
   content: string;
   preview?: boolean;
 };
+
+export type PostWithEmptyContent = Omit<Post, "content"> & { content: "" };

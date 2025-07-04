@@ -10,7 +10,7 @@ type Props = {
   content: string;
 };
 
-export function PostBody({ post, content }: Props) {
+export function PostBodyForMd({ post, content }: Props) {
   return (
     <div className="max-w-3xl md:mr-10">
       <div className="flex flex-wrap gap-4">
