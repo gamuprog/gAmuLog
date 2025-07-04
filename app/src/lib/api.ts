@@ -6,18 +6,11 @@ import matter from "gray-matter";
 import { tsxFrontMatters } from "@/entity/tsxFrontMatters";
 import { Post } from "@/interfaces/post";
 
-// TODO: TSX記事も一緒に取得する(top pageなどで表示するため)
 const postsDirectory = join(process.cwd(), "_posts");
 
 export function getMdPostSlugs() {
   const mdSlugs = fs.readdirSync(postsDirectory);
   return mdSlugs;
-}
-
-// 使わなそう
-export function getTsxPostSlugs() {
-  const tsxSlugs = tsxFrontMatters.map((post) => post.slug);
-  return tsxSlugs;
 }
 
 export function getPostBySlug(slug: string) {
@@ -26,7 +19,6 @@ export function getPostBySlug(slug: string) {
 
   // fullPath: mdファイルまでの完全パス ex)Users/main/Desktop/...../postA.md
   const fullPath = join(postsDirectory, `${realSlug}.md`);
-  // logs({ slug, realSlug, fullPath });
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
   return { ...data, slug: realSlug, content } as Post;

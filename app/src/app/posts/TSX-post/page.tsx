@@ -30,8 +30,6 @@ export default async function Page() {
     <main>
       <PostPageHeader />
       <article className="my-20 md:my-32 md:px-16">
-        {/* 埋め込みスクリプト */}
-
         <PostTitle>{post.title}</PostTitle>
 
         <div className="mx-4 flex justify-between md:mr-16 md:ml-0">
