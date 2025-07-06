@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { HomeHeader } from "@/components/home/HomeHeader";
 import { HomeSection } from "@/components/home/HomeSection";
 import { getAllPosts } from "@/lib/api";
+import ScrollToTopButton from "@/components/button/ScrollToTopButton";
 
 export const metadata: Metadata = {
   alternates: {
@@ -72,6 +73,7 @@ export default async function Index() {
         className="bg-gray-100"
         viewMoreTo="/lifestyle-hobby"
       />
+      <ScrollToTopButton />
     </main>
   );
 }
