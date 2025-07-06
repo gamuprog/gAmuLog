@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import { ScrollToTopButton } from "@/components/button/ScrollToTopButton";
 import { HomeHeader } from "@/components/home/HomeHeader";
 import { HomeSection } from "@/components/home/HomeSection";
 import { getAllPosts } from "@/lib/api";
@@ -72,6 +73,7 @@ export default async function Index() {
         className="bg-gray-100"
         viewMoreTo="/lifestyle-hobby"
       />
+      <ScrollToTopButton />
     </main>
   );
 }

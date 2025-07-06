@@ -14,6 +14,7 @@ export function Footer() {
         </h3>
         <div className="mr-2 text-sm">がむログ</div>
       </div>
+
       <div className="flex justify-center">
         <FooterItems />
       </div>
