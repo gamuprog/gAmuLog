@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
+import { ScrollToTopButton } from "@/components/button/ScrollToTopButton";
 import { HomeHeader } from "@/components/home/HomeHeader";
 import { HomeSection } from "@/components/home/HomeSection";
 import { getAllPosts } from "@/lib/api";
-import ScrollToTopButton from "@/components/button/ScrollToTopButton";
 
 export const metadata: Metadata = {
   alternates: {

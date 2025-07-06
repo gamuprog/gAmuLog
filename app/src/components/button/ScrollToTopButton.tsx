@@ -2,7 +2,7 @@
 
 import { SlArrowUp } from "react-icons/sl";
 
-export default function ScrollToTopButton() {
+export function ScrollToTopButton() {
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
