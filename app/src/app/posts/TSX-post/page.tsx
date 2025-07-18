@@ -11,6 +11,7 @@ import { PostTitle } from "@/components/post/PostTitle";
 import { recommendSlugs } from "@/entity/recommendSlugs";
 import { tsxFrontMatters } from "@/entity/tsxFrontMatters";
 import { getAllPosts } from "@/lib/api";
+import { metadataBase } from "@/lib/constants";
 
 const slug = "TSX-post";
 const post = tsxFrontMatters.find((post) => post.slug === slug);
@@ -55,6 +56,7 @@ export default async function Page() {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(metadataBase),
   title: post?.title,
   description: post?.excerpt,
   openGraph: {
