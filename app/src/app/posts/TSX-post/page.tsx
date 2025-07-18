@@ -70,8 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: frontMatter?.title,
-    description: frontMatter?.excerpt,
-    images: [frontMatter?.coverImage || ""],
+    title: post?.title,
+    description: post?.excerpt,
+    images: [post?.coverImage || ""],
   },
 };
