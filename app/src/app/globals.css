@@ -46,3 +46,10 @@ code {
 .view-more-button:hover span {
   color: white;
 }
+
+.rainbow-text {
+  background: linear-gradient(90deg, #feac5e 0%, #c779d0 50%, #4bc0c8 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}

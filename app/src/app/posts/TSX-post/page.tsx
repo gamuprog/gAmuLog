@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import React from "react";
 
-import TestContent from "@/app/posts/TSX-post/TestContent";
+import Content from "@/app/posts/TSX-post/Content";
 import { Sidebar } from "@/components/Sidebar";
 import { ShareButtons } from "@/components/button/ShareButtons";
 import { PostBodyForTsx } from "@/components/post/PostBodyForTsx";
@@ -39,7 +39,7 @@ export default async function Page() {
           </div>
 
           <PostBodyForTsx post={post}>
-            <TestContent />
+            <Content />
           </PostBodyForTsx>
 
           <Sidebar
