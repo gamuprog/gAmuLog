@@ -55,16 +55,15 @@ export default async function Page() {
   );
 }
 
-const frontMatter = tsxFrontMatters.find((post) => post.slug === slug);
 export const metadata: Metadata = {
-  title: frontMatter?.title,
-  description: frontMatter?.excerpt,
+  title: post?.title,
+  description: post?.excerpt,
   openGraph: {
-    title: frontMatter?.title,
-    description: frontMatter?.excerpt,
+    title: post?.title,
+    description: post?.excerpt,
     images: [
       {
-        url: frontMatter?.ogImage.url || "",
+        url: post?.ogImage.url || "",
         width: 1200,
         height: 630,
       },
