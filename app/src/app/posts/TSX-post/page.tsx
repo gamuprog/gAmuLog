@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
 
@@ -11,8 +12,9 @@ import { recommendSlugs } from "@/entity/recommendSlugs";
 import { tsxFrontMatters } from "@/entity/tsxFrontMatters";
 import { getAllPosts } from "@/lib/api";
 
+const slug = "TSX-post";
 export default async function Page() {
-  const post = tsxFrontMatters.find((post) => post.slug === "TSX-post");
+  const post = tsxFrontMatters.find((post) => post.slug === slug);
 
   if (!post) return notFound();
 
@@ -52,3 +54,26 @@ export default async function Page() {
     </main>
   );
 }
+
+const frontMatter = tsxFrontMatters.find((post) => post.slug === slug);
+export const metadata: Metadata = {
+  title: frontMatter?.title,
+  description: frontMatter?.excerpt,
+  openGraph: {
+    title: frontMatter?.title,
+    description: frontMatter?.excerpt,
+    images: [
+      {
+        url: frontMatter?.ogImage.url || "",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: frontMatter?.title,
+    description: frontMatter?.excerpt,
+    images: [frontMatter?.coverImage || ""],
+  },
+};
