@@ -47,9 +47,4 @@ code {
   color: white;
 }
 
-.rainbow-text {
-  background: linear-gradient(90deg, #feac5e 0%, #c779d0 50%, #4bc0c8 100%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  color: transparent;
-}
+/* The .rainbow-text class is intended for future use or dynamic application to create text with a gradient effect. */
