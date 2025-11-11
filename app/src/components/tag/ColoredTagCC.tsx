@@ -137,6 +137,16 @@ export const ColoredTagCC = ({ tag }: Props) => {
           サウナ
         </span>
       );
+    case "旅":
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-green-800 hover:-m-[1px] text-sm bg-green-200 text-green-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          旅
+        </span>
+      );
     case "Other":
       return (
         <span
@@ -145,6 +155,16 @@ export const ColoredTagCC = ({ tag }: Props) => {
           onClick={(e) => handleClickTag(e, tag)}
         >
           その他
+        </span>
+      );
+    default:
+      return (
+        <span
+          style={{ boxSizing: "border-box" }}
+          className="hover:border hover:border-gray-800 hover:-m-[1px] text-sm bg-gray-200 text-gray-800 px-2 pb-[2px] rounded-full"
+          onClick={(e) => handleClickTag(e, tag)}
+        >
+          {tag}
         </span>
       );
   }

@@ -105,6 +105,14 @@ export const ColoredTagSC = ({ tag }: Props) => {
           </span>
         </Link>
       );
+    case "旅":
+      return (
+        <Link href="/search?tag=旅" className="!no-underline">
+          <span className="hover:border hover:border-green-800 hover:-m-[1px] text-sm bg-green-200 text-green-800 px-2 pb-[2px] rounded-full">
+            旅
+          </span>
+        </Link>
+      );
     case "Other":
       return (
         <Link href="/search?tag=Other" className="!no-underline">
@@ -113,5 +121,13 @@ export const ColoredTagSC = ({ tag }: Props) => {
           </span>
         </Link>
       );
+      default:
+        return (
+          <Link href={`/search?tag=${tag}`} className="!no-underline">
+            <span className="hover:border hover:border-gray-800 hover:-m-[1px] text-sm bg-gray-200 text-gray-800 px-2 pb-[2px] rounded-full">
+              {tag}
+            </span>
+          </Link>
+        );
   }
 };

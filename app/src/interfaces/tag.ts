@@ -12,4 +12,5 @@ export type Tag =
   | "CS"
   | "Tools"
   | "サウナ"
+  | "旅"
   | "Other";

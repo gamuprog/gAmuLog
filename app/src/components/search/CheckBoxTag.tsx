@@ -10,6 +10,11 @@ type Props = {
   defaultChecked?: boolean;
   className?: string;
 };
+
+// 共通のデフォルトstyle
+const defaultTagStyle = "bg-gray-200 text-gray-800 pb-[2px]";
+const defaultCheckedTagStyle = "border-2 border-gray-800 -m-[2px]";
+
 export const CheckBoxTag = ({
   tag,
   onClick,
@@ -17,7 +22,7 @@ export const CheckBoxTag = ({
   defaultChecked,
   className,
 }: Props) => {
-  const tagStyleVariants: { [key in Tag]: string } = {
+  const tagStyleVariants: Partial<{ [key in Tag]: string }> = {
     Life: "bg-green-200 text-green-800 py-[1px]",
     Programming: "bg-blue-200 text-blue-800 pb-[2px]",
     JavaScript: "bg-yellow-200 text-yellow-800 pb-[2px]",
@@ -30,10 +35,11 @@ export const CheckBoxTag = ({
     CS: "bg-violet-200 text-violet-800 pb-[2px]",
     Tools: "bg-red-200 text-red-800 pb-[2px]",
     サウナ: "bg-red-200 text-red-800 pb-[2px]",
+    旅: "bg-green-200 text-green-800 pb-[2px]",
     Other: "bg-gray-200 text-gray-800 pb-[2px]",
   };
 
-  const checkedTagStyleVariants: { [key in Tag]: string } = {
+  const checkedTagStyleVariants: Partial<{ [key in Tag]: string }> = {
     Life: "border-2 border-green-800 -m-[2px]",
     Programming: "border-2 border-blue-800 -m-[2px]",
     JavaScript: "border-2 border-yellow-800 -m-[2px]",
@@ -46,15 +52,17 @@ export const CheckBoxTag = ({
     CS: "border-2 border-violet-800 -m-[2px]",
     Tools: "border-2 border-red-800 -m-[2px]",
     サウナ: "border-2 border-red-800 -m-[2px]",
+    旅: "border-2 border-green-800 -m-[2px]",
     Other: "border-2 border-gray-800 -m-[2px]",
   };
+
+  const style = tagStyleVariants[tag] ?? defaultTagStyle;
+  const checkedStyle = isChecked ? (checkedTagStyleVariants[tag] ?? defaultCheckedTagStyle) : "";
 
   return (
     <div className={`${className} inline`}>
       <label
-        className={`rounded-full px-2 cursor-pointer ${tagStyleVariants[tag]} ${
-          isChecked && checkedTagStyleVariants[tag]
-        }`}
+        className={`rounded-full px-2 cursor-pointer ${style} ${checkedStyle}`}
       >
         <input
           type="checkbox"

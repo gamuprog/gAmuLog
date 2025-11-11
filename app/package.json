@@ -4,7 +4,8 @@
     "dev": "next dev --turbopack --hostname localhost",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "git clean -xdf .next node_modules out dist .cache"
   },
   "dependencies": {
     "classnames": "^2.5.1",
