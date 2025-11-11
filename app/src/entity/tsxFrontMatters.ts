@@ -16,4 +16,19 @@ export const tsxFrontMatters: PostWithEmptyContent[] = [
     },
     content: "",
   },
+  {
+    slug: "walk-to-Himeji",
+    title: "姫路まで70km散歩してみた",
+    date: "2025-11-11T05:35:07.322Z",
+    coverImage: "/assets/blog/TSX-post/TSX-post_cover.webp",
+    category: "LifeStyle",
+    tags: ["旅"],
+    author: { name: "がむ", picture: "/assets/blog/authors/jj.jpeg" },
+    excerpt:
+      "MarkdownだけじゃなくTSXでも記事を書こうとしたら日が50回くらい暮れた。",
+    ogImage: {
+      url: "/assets/blog/TSX-post/TSX-post_cover.webp",
+    },
+    content: "",
+  },
 ];
